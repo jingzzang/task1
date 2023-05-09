@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gGo-AM-EbE">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--info-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="info" id="BYZ-38-t0r" customClass="ViewController" customModule="task1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="info" id="BYZ-38-t0r" customClass="MainViewController" customModule="task1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="vH9-9t-HaR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.85384205019306758" green="0.95210919616341771" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="service" image="cart" catalog="system" id="bfq-Wo-17t"/>
                 </viewController>
@@ -49,7 +49,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="IHE-IJ-cbI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.95470605330328551" blue="0.77546561129397118" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="push" image="alarm" catalog="system" id="wUc-Kb-yXu"/>
                 </viewController>
@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="wRo-an-SgH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.82527950158229502" green="1" blue="0.81168551085189455" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="settings" image="cube.transparent" catalog="system" id="Ylk-Th-MIx"/>
                 </viewController>
@@ -81,7 +81,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VPy-tg-kMv">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="d20-Kg-VEP"/>
@@ -92,7 +92,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzM-gu-LPc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="-151"/>
+            <point key="canvasLocation" x="1454" y="-177"/>
         </scene>
     </scenes>
     <resources>

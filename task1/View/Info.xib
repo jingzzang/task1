@@ -66,6 +66,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <accessibility key="accessibilityConfiguration" identifier="infoBaseView"/>
             <constraints>
                 <constraint firstItem="7K8-1N-lI4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="5RL-Bj-mlz"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7K8-1N-lI4" secondAttribute="bottom" id="Ayk-nm-g7n"/>
