@@ -12,6 +12,13 @@
 		505019702A0A858100C08A38 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050196F2A0A858100C08A38 /* TabViewController.swift */; };
 		505019722A0A8BEF00C08A38 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505019712A0A8BEF00C08A38 /* Main.xib */; };
 		505019742A0A8D7A00C08A38 /* Default.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505019732A0A8D7A00C08A38 /* Default.storyboard */; };
+		505019762A0AFD6700C08A38 /* Service.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505019752A0AFD6700C08A38 /* Service.xib */; };
+		505019782A0AFD8000C08A38 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505019772A0AFD8000C08A38 /* ServiceViewController.swift */; };
+		5050197C2A0AFD9F00C08A38 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050197B2A0AFD9F00C08A38 /* SettingsViewController.swift */; };
+		5050197E2A0AFDEB00C08A38 /* History.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5050197D2A0AFDEB00C08A38 /* History.xib */; };
+		505019802A0AFE0000C08A38 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050197F2A0AFE0000C08A38 /* HistoryViewController.swift */; };
+		505019842A0AFEC300C08A38 /* CommonUitl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505019832A0AFEC300C08A38 /* CommonUitl.swift */; };
+		505019872A0B00FB00C08A38 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505019862A0B00FB00C08A38 /* Settings.xib */; };
 		505D57112A09156B0047CE1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D57102A09156B0047CE1B /* AppDelegate.swift */; };
 		505D57132A09156B0047CE1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D57122A09156B0047CE1B /* SceneDelegate.swift */; };
 		505D57152A09156B0047CE1B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D57142A09156B0047CE1B /* MainViewController.swift */; };
@@ -25,6 +32,13 @@
 		5050196F2A0A858100C08A38 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		505019712A0A8BEF00C08A38 /* Main.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
 		505019732A0A8D7A00C08A38 /* Default.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Default.storyboard; sourceTree = "<group>"; };
+		505019752A0AFD6700C08A38 /* Service.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Service.xib; sourceTree = "<group>"; };
+		505019772A0AFD8000C08A38 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		5050197B2A0AFD9F00C08A38 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5050197D2A0AFDEB00C08A38 /* History.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = History.xib; sourceTree = "<group>"; };
+		5050197F2A0AFE0000C08A38 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		505019832A0AFEC300C08A38 /* CommonUitl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUitl.swift; sourceTree = "<group>"; };
+		505019862A0B00FB00C08A38 /* Settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
 		505D570D2A09156B0047CE1B /* task1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = task1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		505D57102A09156B0047CE1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		505D57122A09156B0047CE1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,9 +80,12 @@
 		5037E7352A09C8F400257514 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				505D571B2A09156C0047CE1B /* LaunchScreen.storyboard */,
 				505019732A0A8D7A00C08A38 /* Default.storyboard */,
+				505D571B2A09156C0047CE1B /* LaunchScreen.storyboard */,
 				505019712A0A8BEF00C08A38 /* Main.xib */,
+				505019752A0AFD6700C08A38 /* Service.xib */,
+				5050197D2A0AFDEB00C08A38 /* History.xib */,
+				505019862A0B00FB00C08A38 /* Settings.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -76,8 +93,11 @@
 		5037E7362A09C90300257514 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				505D57142A09156B0047CE1B /* MainViewController.swift */,
 				5050196F2A0A858100C08A38 /* TabViewController.swift */,
+				505D57142A09156B0047CE1B /* MainViewController.swift */,
+				505019772A0AFD8000C08A38 /* ServiceViewController.swift */,
+				5050197F2A0AFE0000C08A38 /* HistoryViewController.swift */,
+				5050197B2A0AFD9F00C08A38 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -87,6 +107,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		505019852A0AFECB00C08A38 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				505019832A0AFEC300C08A38 /* CommonUitl.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		505D57042A09156B0047CE1B = {
@@ -111,9 +139,10 @@
 			children = (
 				505D57102A09156B0047CE1B /* AppDelegate.swift */,
 				505D57122A09156B0047CE1B /* SceneDelegate.swift */,
-				5037E7372A09C91B00257514 /* Model */,
-				5037E7352A09C8F400257514 /* View */,
 				5037E7362A09C90300257514 /* Controller */,
+				5037E7352A09C8F400257514 /* View */,
+				5037E7372A09C91B00257514 /* Model */,
+				505019852A0AFECB00C08A38 /* Utilities */,
 				505D571E2A09156C0047CE1B /* Info.plist */,
 			);
 			path = task1;
@@ -177,11 +206,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505019872A0B00FB00C08A38 /* Settings.xib in Resources */,
 				5037E7342A09223600257514 /* intro.jpg in Resources */,
+				505019762A0AFD6700C08A38 /* Service.xib in Resources */,
 				5037E73B2A09CFE500257514 /* profile.png in Resources */,
 				505D571D2A09156C0047CE1B /* LaunchScreen.storyboard in Resources */,
 				505019722A0A8BEF00C08A38 /* Main.xib in Resources */,
 				505019742A0A8D7A00C08A38 /* Default.storyboard in Resources */,
+				5050197E2A0AFDEB00C08A38 /* History.xib in Resources */,
 				505D571A2A09156C0047CE1B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,7 +227,11 @@
 			files = (
 				505019702A0A858100C08A38 /* TabViewController.swift in Sources */,
 				505D57152A09156B0047CE1B /* MainViewController.swift in Sources */,
+				505019842A0AFEC300C08A38 /* CommonUitl.swift in Sources */,
+				5050197C2A0AFD9F00C08A38 /* SettingsViewController.swift in Sources */,
 				505D57112A09156B0047CE1B /* AppDelegate.swift in Sources */,
+				505019782A0AFD8000C08A38 /* ServiceViewController.swift in Sources */,
+				505019802A0AFE0000C08A38 /* HistoryViewController.swift in Sources */,
 				505D57132A09156B0047CE1B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

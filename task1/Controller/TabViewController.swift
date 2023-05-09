@@ -12,24 +12,24 @@ class TabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let firstVC = MainViewController()
-        firstVC.view.backgroundColor = .white
-        firstVC.tabBarItem = tabBarItem(image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"), tag: 0)
+        let mainVC = MainViewController()
+        mainVC.view.backgroundColor = .white
+        mainVC.tabBarItem = tabBarItem(image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"), tag: 0)
         
-        let secondVC = UIViewController()
-        secondVC.view.backgroundColor = .white
-        secondVC.tabBarItem = tabBarItem(image: UIImage(systemName: "star"), selectedImage: UIImage(systemName: "star.fill"), tag: 1)
+        let serviceVC = ServiceViewController()
+        serviceVC.view.backgroundColor = .white
+        serviceVC.tabBarItem = tabBarItem(image: UIImage(systemName: "star"), selectedImage: UIImage(systemName: "star.fill"), tag: 1)
         
-        let thirdVC = UIViewController()
-        thirdVC.view.backgroundColor = .white
-        thirdVC.tabBarItem = tabBarItem(image: UIImage(systemName: "gear"), selectedImage: UIImage(systemName: "gear.fill"), tag: 2)
+        let historyVC = HistoryViewController()
+        historyVC.view.backgroundColor = .white
+        historyVC.tabBarItem = tabBarItem(image: UIImage(systemName: "gear"), selectedImage: UIImage(systemName: "gear.fill"), tag: 2)
         
-        let fourthVC = UIViewController()
-        fourthVC.view.backgroundColor = .white
-        fourthVC.tabBarItem = tabBarItem(image: UIImage(systemName: "star"), selectedImage: UIImage(systemName: "star.fill"), tag: 3)
+        let settingsVC = SettingsViewController()
+        settingsVC.view.backgroundColor = .white
+        settingsVC.tabBarItem = tabBarItem(image: UIImage(systemName: "star"), selectedImage: UIImage(systemName: "star.fill"), tag: 3)
         
         // Set the view controllers for the tab bar controller
-        viewControllers = [firstVC ,secondVC, thirdVC, fourthVC]
+        viewControllers = [mainVC ,serviceVC, historyVC, settingsVC]
     }
     
     
