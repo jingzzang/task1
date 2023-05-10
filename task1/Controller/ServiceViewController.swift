@@ -7,18 +7,13 @@
 
 import UIKit
 
-final class ServiceViewController: UIViewController {
-
+final class ServiceViewController: UIViewController, UIScrollViewDelegate {
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet var contentView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setNib()
-    }
-    
-    func setNib() {
-        let nib = UINib(nibName: "Service", bundle: nil)
-        if let serviceView = nib.instantiate(withOwner: nil, options: nil).first as? UIView {
-            view.addSubview(serviceView)
-        }
+        scrollView.addSubview(contentView)
     }
 }

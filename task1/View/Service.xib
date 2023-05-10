@@ -9,28 +9,89 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceViewController" customModule="task1" customModuleProvider="target"/>
-        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceViewController" customModule="task1" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="k3p-nZ-nZH" id="K7e-58-wkK"/>
+                <outlet property="scrollView" destination="Vpy-K9-iPR" id="OZn-jZ-YeY"/>
+                <outlet property="view" destination="gzT-wE-7BJ" id="yyX-wq-QXJ"/>
+            </connections>
+        </placeholder>
+        <view contentMode="scaleToFill" id="gzT-wE-7BJ" userLabel="BaseView">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="뽕" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kI8-Is-3jS">
-                    <rect key="frame" x="173" y="394" width="46" height="64"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="53"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpy-K9-iPR">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                </scrollView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <viewLayoutGuide key="safeArea" id="EhU-Ax-u4Q"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="-33" y="20"/>
+            <constraints>
+                <constraint firstItem="Vpy-K9-iPR" firstAttribute="leading" secondItem="EhU-Ax-u4Q" secondAttribute="leading" id="OH1-eh-PhW"/>
+                <constraint firstItem="Vpy-K9-iPR" firstAttribute="top" secondItem="EhU-Ax-u4Q" secondAttribute="top" id="Y17-pG-EDH"/>
+                <constraint firstItem="EhU-Ax-u4Q" firstAttribute="bottom" secondItem="Vpy-K9-iPR" secondAttribute="bottom" id="pa0-Ol-B8s"/>
+                <constraint firstItem="EhU-Ax-u4Q" firstAttribute="trailing" secondItem="Vpy-K9-iPR" secondAttribute="trailing" id="s8q-DR-GyW"/>
+            </constraints>
+            <point key="canvasLocation" x="-1801" y="-16"/>
+        </view>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k3p-nZ-nZH" userLabel="ContentView">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omE-qj-1K1" userLabel="Header">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품/서비스" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oau-sy-JZQ">
+                            <rect key="frame" x="19.999999999999993" y="29.333333333333329" width="111.33333333333331" height="27.666666666666671"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="6Pt-4i-yPV"/>
+                        <constraint firstItem="oau-sy-JZQ" firstAttribute="leading" secondItem="omE-qj-1K1" secondAttribute="leading" constant="20" id="Bq3-AJ-Kjp"/>
+                        <constraint firstAttribute="bottom" secondItem="oau-sy-JZQ" secondAttribute="bottom" constant="13" id="IAy-iV-Dic"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="J8m-ED-u6E"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6wj-d5-sLz">
+                    <rect key="frame" x="0.0" y="70" width="393" height="40"/>
+                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ABZ-YF-FLm"/>
+                    </constraints>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Exa-aF-zdD">
+                    <rect key="frame" x="0.0" y="110" width="393" height="742"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6wj-d5-sLz" secondAttribute="trailing" id="1Dc-VC-Liz"/>
+                <constraint firstItem="6wj-d5-sLz" firstAttribute="leading" secondItem="k3p-nZ-nZH" secondAttribute="leading" id="5cQ-bZ-reM"/>
+                <constraint firstItem="Exa-aF-zdD" firstAttribute="top" secondItem="6wj-d5-sLz" secondAttribute="bottom" id="Sae-vP-yUy"/>
+                <constraint firstItem="Exa-aF-zdD" firstAttribute="leading" secondItem="k3p-nZ-nZH" secondAttribute="leading" id="YsL-HM-qf6"/>
+                <constraint firstItem="omE-qj-1K1" firstAttribute="top" secondItem="k3p-nZ-nZH" secondAttribute="top" id="cXV-Ot-GFJ"/>
+                <constraint firstItem="omE-qj-1K1" firstAttribute="leading" secondItem="k3p-nZ-nZH" secondAttribute="leading" id="ebu-Hv-vDr"/>
+                <constraint firstAttribute="bottom" secondItem="Exa-aF-zdD" secondAttribute="bottom" id="kq2-IQ-J4X"/>
+                <constraint firstItem="6wj-d5-sLz" firstAttribute="top" secondItem="omE-qj-1K1" secondAttribute="bottom" id="pvJ-PX-Us7"/>
+                <constraint firstAttribute="trailing" secondItem="Exa-aF-zdD" secondAttribute="trailing" id="vmh-u2-aEb"/>
+                <constraint firstAttribute="trailing" secondItem="omE-qj-1K1" secondAttribute="trailing" id="yt7-nJ-xv6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-1057.2519083969464" y="-15.492957746478874"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
