@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="task1" customModuleProvider="target">
             <connections>
+                <outlet property="cView" destination="dlJ-LJ-s9w" id="H6N-XU-P60"/>
+                <outlet property="contentView" destination="N2k-mI-4pQ" id="nyl-be-lSi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="RPX-zX-SZK"/>
             </connections>
         </placeholder>
@@ -87,6 +89,18 @@
             </constraints>
             <point key="canvasLocation" x="106" y="46"/>
         </view>
+        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="N2k-mI-4pQ">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="952" y="45"/>
+        </tableView>
+        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7cZ-Ni-mSK" userLabel="adsView">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <point key="canvasLocation" x="951.90839694656484" y="435.91549295774649"/>
+        </imageView>
     </objects>
     <resources>
         <image name="profile.png" width="41.454544067382812" height="41.454544067382812"/>
