@@ -22,7 +22,7 @@ struct MainCellItem {
 
 /*
  * type : 셀 종류
- * 0 : 단순 이미지 버튼 (btnType: 0 - 광고, 1 - 상품가입모달, 2 - 화면편집모달)
+ * 0 : 단순 이미지 버튼 (btnType: 1 - 상품가입모달, 2 - 화면편집모달)
  * 1 : 입출금
  * 2 : 모임통장 (moneybox/safeboxYn 불가)
  * 3 : 적립식 상품

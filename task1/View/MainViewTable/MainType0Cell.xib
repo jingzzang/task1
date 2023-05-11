@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,36 +14,35 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfy-Kn-iJ5" userLabel="Background">
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vfy-Kn-iJ5" userLabel="background">
                     <rect key="frame" x="20" y="5" width="353" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemTealColor"/>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xnF-wt-ibu">
-                    <rect key="frame" x="25" y="10" width="343" height="50"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bch-73-4zH">
+                <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bch-73-4zH">
                     <rect key="frame" x="20" y="5" width="353" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="+"/>
                 </button>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="zxW-kn-L3A"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <accessibility key="accessibilityConfiguration" identifier="type0"/>
             <constraints>
-                <constraint firstItem="xnF-wt-ibu" firstAttribute="bottom" secondItem="Vfy-Kn-iJ5" secondAttribute="bottom" constant="-5" id="0aw-km-PBJ"/>
                 <constraint firstItem="Vfy-Kn-iJ5" firstAttribute="top" secondItem="Klx-lN-Q19" secondAttribute="top" constant="5" id="9BU-mj-3ZY"/>
                 <constraint firstAttribute="bottom" secondItem="Bch-73-4zH" secondAttribute="bottom" constant="5" id="Dja-YC-jZe"/>
-                <constraint firstItem="xnF-wt-ibu" firstAttribute="top" secondItem="Vfy-Kn-iJ5" secondAttribute="top" constant="5" id="K3f-jG-fYq"/>
                 <constraint firstItem="Vfy-Kn-iJ5" firstAttribute="leading" secondItem="Klx-lN-Q19" secondAttribute="leading" constant="20" id="awI-3Y-ClK"/>
                 <constraint firstItem="Bch-73-4zH" firstAttribute="leading" secondItem="Klx-lN-Q19" secondAttribute="leading" constant="20" id="eam-KU-XG4"/>
                 <constraint firstItem="Bch-73-4zH" firstAttribute="top" secondItem="Klx-lN-Q19" secondAttribute="top" constant="5" id="hRu-bx-o7D"/>
-                <constraint firstItem="xnF-wt-ibu" firstAttribute="leading" secondItem="Vfy-Kn-iJ5" secondAttribute="leading" constant="5" id="jb7-7z-T28"/>
                 <constraint firstAttribute="trailing" secondItem="Bch-73-4zH" secondAttribute="trailing" constant="20" id="kjV-IT-Mk0"/>
                 <constraint firstAttribute="bottom" secondItem="Vfy-Kn-iJ5" secondAttribute="bottom" constant="5" id="qkD-aq-HOr"/>
                 <constraint firstAttribute="trailing" secondItem="Vfy-Kn-iJ5" secondAttribute="trailing" constant="20" id="rKV-fD-ZHk"/>
-                <constraint firstItem="Vfy-Kn-iJ5" firstAttribute="trailing" secondItem="xnF-wt-ibu" secondAttribute="trailing" constant="5" id="yJn-Nc-Y3u"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="background" destination="Vfy-Kn-iJ5" id="nVl-gZ-rwP"/>
+            </connections>
             <point key="canvasLocation" x="64.885496183206101" y="20.422535211267608"/>
         </view>
     </objects>

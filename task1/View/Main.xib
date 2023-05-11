@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="task1" customModuleProvider="target">
             <connections>
-                <outlet property="cView" destination="dlJ-LJ-s9w" id="H6N-XU-P60"/>
+                <outlet property="contentBaseView" destination="dlJ-LJ-s9w" id="40g-6T-ZAc"/>
                 <outlet property="contentView" destination="N2k-mI-4pQ" id="nyl-be-lSi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="RPX-zX-SZK"/>
             </connections>
@@ -29,26 +29,26 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="70"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="70h-hA-Qui">
-                            <rect key="frame" x="20" y="30" width="124" height="25"/>
+                            <rect key="frame" x="20" y="30" width="125" height="25"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCY-YX-ssy" userLabel="userName">
-                                    <rect key="frame" x="0.0" y="0.0" width="62" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="63" height="25"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="USER">
+                                    <state key="normal" title="김쵸비">
                                         <color key="titleColor" red="0.06238849607" green="0.079117377190000004" blue="0.1002998737" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCm-Cd-LTU" userLabel="account">
-                                    <rect key="frame" x="74" y="0.0" width="50" height="25"/>
+                                    <rect key="frame" x="75" y="0.0" width="50" height="25"/>
                                     <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="bs8-8r-BcO"/>
                                         <constraint firstAttribute="width" constant="50" id="qW4-aZ-R6o"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="Acct">
+                                    <state key="normal" title="내 계좌">
                                         <color key="titleColor" red="0.06238849607" green="0.079117377190000004" blue="0.1002998737" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </state>
                                 </button>
@@ -103,7 +103,7 @@
         </imageView>
     </objects>
     <resources>
-        <image name="profile.png" width="41.454544067382812" height="41.454544067382812"/>
+        <image name="profile.png" width="20.727272033691406" height="20.727272033691406"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

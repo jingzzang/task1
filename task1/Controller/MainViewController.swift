@@ -8,15 +8,21 @@
 import UIKit
 
 final class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    @IBOutlet var contentView: UITableView!
     
-    @IBOutlet weak var cView: UIView!
+    @IBOutlet var contentView: UITableView!
+    @IBOutlet var contentBaseView: UIView!
+    
+    var data = [1,2,3,0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        contentView.contentInset = UIEdgeInsets(top: 80, left: 0, bottom: 0, right: 0)
         contentView.register(UINib(nibName: "MainType0Cell", bundle: nil), forCellReuseIdentifier: "type0")
         contentView.register(UINib(nibName: "MainType1Cell", bundle: nil), forCellReuseIdentifier: "type1")
-        cView.addSubview(contentView)
+        contentView.register(UINib(nibName: "MainType2Cell", bundle: nil), forCellReuseIdentifier: "type2")
+        contentView.register(UINib(nibName: "MainType3Cell", bundle: nil), forCellReuseIdentifier: "type3")
+        contentBaseView.addSubview(contentView)
+        contentView.separatorStyle = .none // 셀 사이 구분선 스타일
         
         contentView.delegate = self
         contentView.dataSource = self
@@ -26,26 +32,20 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
 // UITableViewDataSource
 extension MainViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        var identifier = indexPath.row == 0 ? "type2" : "type3"
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "type0", for: indexPath) as! MainType0Cell
-            return cell
+        let idx = data[indexPath.row]
+        if idx == 0 {
+            return tableView.dequeueReusableCell(withIdentifier: "type0", for: indexPath) as! MainType0Cell
+        }else if idx == 1 {
+            return tableView.dequeueReusableCell(withIdentifier: "type1", for: indexPath) as! MainType1Cell
+        }else if idx == 2 {
+            return tableView.dequeueReusableCell(withIdentifier: "type2", for: indexPath) as! MainType2Cell
         }else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "type1", for: indexPath) as! MainType1Cell
-            return cell
+            return tableView.dequeueReusableCell(withIdentifier: "type3", for: indexPath) as! MainType3Cell
         }
-        // cell은 반드시 연결된 UITableViewCell 타입으로 캐스팅되어야 함.
-            // TableViewCell(sb)의 Attributes Inspector 내 identifier 값 설정 필수
-
-//        let data = dataArr[indexPath.row] // indexPath.row : data의 index
-//
-//            //cell을 통해 UITableViewCell의 Outlet 변수에 직접 접근
-//        cell.imageViewMain.image = data.image
-//        cell.lblName.text = data.name
     }
 }
 

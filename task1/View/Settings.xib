@@ -20,14 +20,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajb-PM-xwC" userLabel="Content">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemGray2Color"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RFu-b1-TBS" userLabel="Header">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="70"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7N-AC-acb">
-                            <rect key="frame" x="0.0" y="16" width="102.66666666666667" height="41"/>
+                            <rect key="frame" x="0.0" y="16" width="103.33333333333333" height="41"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal">
@@ -35,16 +35,16 @@
                             </state>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="PWN-ox-BzD" userLabel="UserName">
-                            <rect key="frame" x="20" y="28.333333333333329" width="82.666666666666671" height="28.666666666666671"/>
+                            <rect key="frame" x="20" y="28.333333333333329" width="83.333333333333329" height="28.666666666666671"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTD-y2-HcV">
-                                    <rect key="frame" x="0.0" y="0.0" width="61.666666666666664" height="28.666666666666668"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김쵸비" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTD-y2-HcV">
+                                    <rect key="frame" x="0.0" y="0.0" width="62.333333333333336" height="28.666666666666668"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ll-nd-aDk">
-                                    <rect key="frame" x="72.666666666666671" y="0.0" width="10" height="28.666666666666668"/>
+                                    <rect key="frame" x="73.333333333333329" y="0.0" width="10" height="28.666666666666668"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <color key="textColor" systemColor="systemGrayColor"/>
                                     <nil key="highlightedColor"/>

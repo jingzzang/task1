@@ -1,5 +1,5 @@
 //
-//  MainType1Cell.swift
+//  MainType2Cell.swift
 //  task1
 //
 //  Created by 이지은 on 2023/05/11.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class MainType1Cell: UITableViewCell {
+class MainType2Cell: UITableViewCell {
 
-    @IBOutlet var background: MainType1Cell!
+    @IBOutlet var background: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
