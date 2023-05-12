@@ -28,7 +28,7 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <accessibility key="accessibilityConfiguration" identifier="type0"/>
+            <accessibility key="accessibilityConfiguration" identifier="MainType0Cell"/>
             <constraints>
                 <constraint firstItem="Vfy-Kn-iJ5" firstAttribute="top" secondItem="Klx-lN-Q19" secondAttribute="top" constant="5" id="9BU-mj-3ZY"/>
                 <constraint firstAttribute="bottom" secondItem="Bch-73-4zH" secondAttribute="bottom" constant="5" id="Dja-YC-jZe"/>

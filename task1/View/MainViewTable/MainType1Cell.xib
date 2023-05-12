@@ -156,7 +156,7 @@
                 </stackView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <accessibility key="accessibilityConfiguration" identifier="type1"/>
+            <accessibility key="accessibilityConfiguration" identifier="MainType1Cell"/>
             <constraints>
                 <constraint firstItem="XYb-6C-piH" firstAttribute="top" secondItem="za6-wO-at1" secondAttribute="bottom" constant="15" id="11g-o0-RH9"/>
                 <constraint firstItem="1p1-4d-9OC" firstAttribute="leading" secondItem="d4A-z1-xOt" secondAttribute="leading" constant="5" id="9wK-w3-8CS"/>

@@ -94,7 +94,7 @@
                 </stackView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <accessibility key="accessibilityConfiguration" identifier="type2"/>
+            <accessibility key="accessibilityConfiguration" identifier="MainType2Cell"/>
             <constraints>
                 <constraint firstItem="Q54-Kj-jcg" firstAttribute="bottom" secondItem="o9r-bF-8rg" secondAttribute="bottom" id="0Y8-5y-chx"/>
                 <constraint firstItem="o9r-bF-8rg" firstAttribute="trailing" secondItem="MXz-Jr-fG9" secondAttribute="trailing" constant="15" id="0rz-dt-vYn"/>
