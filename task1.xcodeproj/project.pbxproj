@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F93F83B2A0F07AE00774277 /* AdsModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F93F83A2A0F07AE00774277 /* AdsModal.xib */; };
+		3F93F83D2A0F07DD00774277 /* AdsModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93F83C2A0F07DD00774277 /* AdsModalViewController.swift */; };
+		3F93F83F2A0F0DA300774277 /* ads.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F93F83E2A0F0DA300774277 /* ads.png */; };
 		5037E7342A09223600257514 /* intro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5037E7332A09223600257514 /* intro.jpg */; };
 		5037E73B2A09CFE500257514 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 5037E73A2A09CFE500257514 /* profile.png */; };
 		505019702A0A858100C08A38 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5050196F2A0A858100C08A38 /* TabViewController.swift */; };
@@ -46,6 +49,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F93F83A2A0F07AE00774277 /* AdsModal.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsModal.xib; sourceTree = "<group>"; };
+		3F93F83C2A0F07DD00774277 /* AdsModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsModalViewController.swift; sourceTree = "<group>"; };
+		3F93F83E2A0F0DA300774277 /* ads.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ads.png; sourceTree = "<group>"; };
 		5037E7332A09223600257514 /* intro.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intro.jpg; sourceTree = "<group>"; };
 		5037E73A2A09CFE500257514 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		5050196F2A0A858100C08A38 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 		5037E7302A09219500257514 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				3F93F83E2A0F0DA300774277 /* ads.png */,
 				507589692A0D2EED007FD385 /* product.png */,
 				507589672A0D233A007FD385 /* character.png */,
 				507589652A0D19BE007FD385 /* friends.png */,
@@ -131,6 +138,7 @@
 				5050197D2A0AFDEB00C08A38 /* History.xib */,
 				505019862A0B00FB00C08A38 /* Settings.xib */,
 				505019882A0B8A0300C08A38 /* Login.xib */,
+				3F93F83A2A0F07AE00774277 /* AdsModal.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 				5050197F2A0AFE0000C08A38 /* HistoryViewController.swift */,
 				5050197B2A0AFD9F00C08A38 /* SettingsViewController.swift */,
 				5050198B2A0B8AD800C08A38 /* LoginViewController.swift */,
+				3F93F83C2A0F07DD00774277 /* AdsModalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -277,6 +286,8 @@
 				5037E7342A09223600257514 /* intro.jpg in Resources */,
 				5037E73B2A09CFE500257514 /* profile.png in Resources */,
 				507589682A0D233A007FD385 /* character.png in Resources */,
+				3F93F83F2A0F0DA300774277 /* ads.png in Resources */,
+				3F93F83B2A0F07AE00774277 /* AdsModal.xib in Resources */,
 				505D571D2A09156C0047CE1B /* LaunchScreen.storyboard in Resources */,
 				505019722A0A8BEF00C08A38 /* Main.xib in Resources */,
 				505019742A0A8D7A00C08A38 /* Default.storyboard in Resources */,
@@ -303,6 +314,7 @@
 				5050198C2A0B8AD800C08A38 /* LoginViewController.swift in Sources */,
 				505019702A0A858100C08A38 /* TabViewController.swift in Sources */,
 				505D57152A09156B0047CE1B /* MainViewController.swift in Sources */,
+				3F93F83D2A0F07DD00774277 /* AdsModalViewController.swift in Sources */,
 				507589452A0BEDFE007FD385 /* RGBColor.swift in Sources */,
 				507589542A0C5171007FD385 /* MainType0Cell.swift in Sources */,
 				507589562A0C5182007FD385 /* MainType1Cell.swift in Sources */,

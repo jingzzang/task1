@@ -13,6 +13,7 @@ class Data {
     static let shared = Data()
     
     var isLogin: Bool = false
+    var showAds: Bool = true
     
     private init() {
         

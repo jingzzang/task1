@@ -30,6 +30,21 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
         contentView.delegate = self
         contentView.dataSource = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if !Data.shared.isLogin {
+            let loginVC = LoginViewController(nibName: "Login", bundle: nil)
+            navigationController?.pushViewController(loginVC, animated: false)
+        }else {
+            tabBarController?.tabBar.isHidden = false
+            if Data.shared.showAds {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                    let vc = AdsModalViewController()
+                    self.present(vc, animated: true)
+                })
+            }
+        }
+    }
 }
 
 // UITableViewDataSource

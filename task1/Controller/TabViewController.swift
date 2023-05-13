@@ -11,7 +11,7 @@ class TabViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let mainVC = MainViewController(nibName: "Main", bundle: nil)
+        let mainVC = UINavigationController(rootViewController: MainViewController(nibName: "Main", bundle: nil))
         mainVC.view.backgroundColor = .white
         mainVC.tabBarItem = customTabBarItem(image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"), tag: 0)
         
@@ -30,10 +30,10 @@ class TabViewController: UITabBarController {
         viewControllers = [mainVC ,serviceVC, historyVC, settingsVC]
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        goLogin()
-    }
-    
+//    override func viewDidAppear(_ animated: Bool) {
+//        goLogin()
+//    }
+//    
     func customTabBarItem(image: UIImage?, selectedImage: UIImage?, tag: Int) -> UITabBarItem {
         let item = UITabBarItem(title: nil, image: image, selectedImage: selectedImage)
         item.tag = tag
@@ -42,9 +42,11 @@ class TabViewController: UITabBarController {
         return item
     }
     
-    func goLogin() {
-        let loginVC = LoginViewController(nibName: "Login", bundle: nil)
-        loginVC.modalPresentationStyle = .overFullScreen
-        present(loginVC, animated: false, completion: nil)
-    }
+//    func goLogin() {
+//        let loginVC = LoginViewController(nibName: "Login", bundle: nil)
+//        loginVC.modalPresentationStyle = .overFullScreen
+//        present(loginVC, animated: false, completion: nil)
+//        navigationController?.setNavigationBarHidden(true, animated: false)
+//        navigationController?.pushViewController(loginVC, animated: false)
+//    }
 }
