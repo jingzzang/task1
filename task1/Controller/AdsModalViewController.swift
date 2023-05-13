@@ -77,9 +77,6 @@ extension AdsModalViewController: UIViewControllerAnimatedTransitioning {
             })
         } else {
             // Dismissing animation
-            
-            let halfHeight = containerView.frame.height / 2.0
-            
             UIView.animate(withDuration: 0.3, animations: {
                 fromViewController.view.frame.origin.y = containerView.frame.height
             }, completion: { _ in

@@ -28,7 +28,7 @@ class DeviceUtil {
                         Data.shared.isLogin = true
                     } else {
                         // Authentication failed or user canceled
-                        if let error = error {
+                        if let _ = error {
                             // Handle the error appropriately
                         }
                     }
@@ -36,7 +36,7 @@ class DeviceUtil {
             }
         } else {
             // Biometric authentication is not available or not configured
-            if let error = error {
+            if let _ = error {
                 // Handle the error appropriately
             }
         }
