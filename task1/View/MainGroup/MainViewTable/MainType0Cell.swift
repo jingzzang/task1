@@ -26,11 +26,11 @@ class MainType0Cell: UITableViewCell {
 
     // mark : cell 데이터 세팅
     
-    func configure(data: MainCellItem) {
+    func configure(data: AccountInfo) {
         type = data.btnType!
         
         let color = data.backgroundColor
-        background.backgroundColor = UIColor(red: color.red, green: color.green, blue: color.blue, alpha: color.alpha)
+        background.backgroundColor = data.backgroundColor
         
         if type == 1 {
             let buttonTitle = "+"

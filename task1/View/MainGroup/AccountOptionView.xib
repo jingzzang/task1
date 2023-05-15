@@ -27,6 +27,9 @@
                             <state key="normal" title="확인">
                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="confirmBtnClick:" destination="-1" eventType="touchUpInside" id="5d1-Ct-A3h"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

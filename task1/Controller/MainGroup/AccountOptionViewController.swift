@@ -24,4 +24,8 @@ class AccountOptionViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    @IBAction func confirmBtnClick(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
 }

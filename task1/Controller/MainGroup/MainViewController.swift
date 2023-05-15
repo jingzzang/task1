@@ -13,14 +13,13 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var contentBaseView: UIView!
     
     let cellTypes = ["MainType0Cell", "MainType1Cell", "MainType2Cell", "MainType3Cell"]
-   
-    var data = [1,2,3,0]
+    
+    var testData: [AccountInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        
-        contentView.contentInset = UIEdgeInsets(top: 80, left: 0, bottom: 0, right: 0)
+        contentView.contentInset = UIEdgeInsets(top: 80, left: 0, bottom: (tabBarController?.tabBar.frame.size.height ?? 0)+100, right: 0)
         cellTypes.forEach { type in
             contentView.register(UINib(nibName: type, bundle: nil), forCellReuseIdentifier: type)
         }
@@ -29,6 +28,8 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
         
         contentView.delegate = self
         contentView.dataSource = self
+        
+        testData = DataManager().getAcctInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,25 +51,25 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
 // UITableViewDataSource
 extension MainViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return testData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let idx = data[indexPath.row]
-        if idx == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType0Cell
+        let type = testData[indexPath.row].type
+        if type == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[type], for: indexPath) as! MainType0Cell
 //            cell.delegate = self
             return cell
-        }else if idx == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType1Cell
+        }else if type == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[type], for: indexPath) as! MainType1Cell
             cell.delegate = self
             return cell
-        }else if idx == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType2Cell
+        }else if type == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[type], for: indexPath) as! MainType2Cell
 //            cell.delegate = self
             return cell
         }else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType3Cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[type], for: indexPath) as! MainType3Cell
 //            cell.delegate = self
             return cell
         }
@@ -78,7 +79,7 @@ extension MainViewController {
 // UITableViewDelegate
 extension MainViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
