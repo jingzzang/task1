@@ -33,6 +33,9 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        //hide Navigation Bar
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         if !Data.shared.isLogin {
             let loginVC = LoginViewController(nibName: "Login", bundle: nil)
             navigationController?.pushViewController(loginVC, animated: false)
@@ -55,22 +58,27 @@ extension MainViewController {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let type = testData[indexPath.row].type
-        if type == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[type], for: indexPath) as! MainType0Cell
-//            cell.delegate = self
-            return cell
-        }else if type == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[type], for: indexPath) as! MainType1Cell
+        let data = testData[indexPath.row]
+        let type = data.type
+        if type == .Default {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MainType0Cell", for: indexPath) as! MainType0Cell
+            cell.configure(data: data)
             cell.delegate = self
             return cell
-        }else if type == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[type], for: indexPath) as! MainType2Cell
-//            cell.delegate = self
+        }else if type == .Deposit {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MainType1Cell", for: indexPath) as! MainType1Cell
+            cell.configure(data: data)
+            cell.delegate = self
+            return cell
+        }else if type == .Party {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MainType2Cell", for: indexPath) as! MainType2Cell
+            cell.configure(data: data)
+            cell.delegate = self
             return cell
         }else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[type], for: indexPath) as! MainType3Cell
-//            cell.delegate = self
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MainType3Cell", for: indexPath) as! MainType3Cell
+            cell.configure(data: data)
+            cell.delegate = self
             return cell
         }
     }

@@ -9,8 +9,11 @@ import UIKit
 
 class MainType1Cell: UITableViewCell {
     weak var delegate: MainTypeCellDelegate?
+    private var data: AccountInfo?
     
     @IBOutlet var background: MainType1Cell!
+    @IBOutlet weak var acctName: UILabel!
+    @IBOutlet weak var amount: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +27,14 @@ class MainType1Cell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func configure(data: AccountInfo) {
+        self.data = data
+        
+        background.backgroundColor = data.backgroundColor
+        acctName.text = data.accountName
+        amount.text = String(data.amount).getWon()
+    }
+    
     @IBAction func moreBtnClick(_ sender: UIButton) {
         delegate?.moreButtonClicked(isWithoutTheAcctNum: false)
     }

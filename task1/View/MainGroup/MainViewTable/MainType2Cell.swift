@@ -9,7 +9,14 @@ import UIKit
 
 class MainType2Cell: UITableViewCell {
 
+    var delegate: MainTypeCellDelegate?
+    private var data: AccountInfo?
+    
     @IBOutlet var background: UIView!
+    @IBOutlet weak var userImgs: UIImageView!
+    @IBOutlet weak var amount: UILabel!
+    @IBOutlet weak var acctName: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,4 +30,19 @@ class MainType2Cell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func configure(data: AccountInfo) {
+        self.data = data
+        background.backgroundColor = data.backgroundColor
+        userImgs.image = data.image
+        acctName.text = data.accountName
+        amount.text = String(data.amount).getWon()
+    }
+    
+    @IBAction func moveButtonClicked(_ sender: UIButton) {
+        delegate?.moveButtonClicked(isModal: false)
+    }
+    
+    @IBAction func moreBtnClick(_ sender: UIButton) {
+        delegate?.moreButtonClicked(isWithoutTheAcctNum: true)
+    }
 }

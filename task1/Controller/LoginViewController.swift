@@ -11,11 +11,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarController?.tabBar.isHidden = true
-        navigationItem.hidesBackButton = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
+        //hide Navigation Bar
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(false)
@@ -23,7 +24,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func goBtnClick(_ sender: UIButton) {
         Data.shared.isLogin = true
-//        self.dismiss(animated: false)
         navigationController?.popViewController(animated: false)
     }
 }

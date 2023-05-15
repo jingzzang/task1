@@ -42,4 +42,6 @@ extension UIColor {
     static var schooner = UIColor(red: 140/255, green: 130/255, blue: 120/255, alpha: 1.0)
     static var cloud = UIColor(red: 194/255, green: 189/255, blue: 173/255, alpha: 1.0)
     static var auChico = UIColor(red: 152/255, green: 92/255, blue: 88/255, alpha: 1.0)
+    static var lightGrey = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1.0)
+    static var grey = UIColor.gray
 }

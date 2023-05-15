@@ -19,25 +19,12 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.91194527199999997" green="0.84567661199999999" blue="0.78311787389999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="friends.png" id="F8B-7k-VH6" userLabel="profiles">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="logo.png" id="F8B-7k-VH6" userLabel="profiles">
                     <rect key="frame" x="40" y="35" width="36" height="36"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="F8B-7k-VH6" secondAttribute="height" multiplier="1:1" id="SbP-gW-VIo"/>
                         <constraint firstAttribute="width" constant="36" id="ybL-RQ-ZSD"/>
-                    </constraints>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o9r-bF-8rg">
-                    <rect key="frame" x="20" y="5" width="353" height="120"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="more.png" id="MXz-Jr-fG9" userLabel="more Button">
-                    <rect key="frame" x="318" y="15" width="40" height="40"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="MXz-Jr-fG9" secondAttribute="height" multiplier="1:1" id="WSU-I3-xt5"/>
-                        <constraint firstAttribute="width" constant="40" id="qEZ-pC-EOb"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="top" spacing="5" id="JZk-q0-fU5" userLabel="Info">
@@ -60,17 +47,22 @@
                         </label>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="9" id="CC5-m6-5hs" userLabel="addtional buttons">
+                <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o9r-bF-8rg" userLabel="BaseButton">
+                    <rect key="frame" x="20" y="5" width="353" height="120"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="moveButtonClicked:" destination="nFV-pt-TOc" eventType="touchUpInside" id="rFy-Om-h3C"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" spacing="9" id="CC5-m6-5hs" userLabel="addtional buttons">
                     <rect key="frame" x="229" y="83" width="129" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hgX-66-d6F">
-                            <rect key="frame" x="0.0" y="0.0" width="90" height="27"/>
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="27"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="70" id="GjJ-2m-Czq"/>
-                            </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="카드신청">
@@ -78,12 +70,9 @@
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2io-KW-ZpR">
-                            <rect key="frame" x="99" y="0.0" width="30" height="27"/>
+                            <rect key="frame" x="69" y="0.0" width="60" height="27"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="50" id="oCg-mf-Meg"/>
-                            </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="이체">
@@ -92,6 +81,25 @@
                         </button>
                     </subviews>
                 </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="more.png" id="MXz-Jr-fG9" userLabel="more Button">
+                    <rect key="frame" x="318" y="15" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MXz-Jr-fG9" secondAttribute="height" multiplier="1:1" id="WSU-I3-xt5"/>
+                        <constraint firstAttribute="width" constant="40" id="qEZ-pC-EOb"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJD-4E-44S" userLabel="moreBtn">
+                    <rect key="frame" x="318" y="15" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="3Cn-wv-ZKM"/>
+                        <constraint firstAttribute="width" secondItem="CJD-4E-44S" secondAttribute="height" multiplier="1:1" id="zSG-aj-jTA"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="moreBtnClick:" destination="nFV-pt-TOc" eventType="touchUpInside" id="xlH-Sg-WlQ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <accessibility key="accessibilityConfiguration" identifier="MainType2Cell"/>
@@ -109,19 +117,24 @@
                 <constraint firstItem="F8B-7k-VH6" firstAttribute="leading" secondItem="Q54-Kj-jcg" secondAttribute="leading" constant="20" id="Y8k-7J-CX0"/>
                 <constraint firstItem="o9r-bF-8rg" firstAttribute="leading" secondItem="Q54-Kj-jcg" secondAttribute="leading" id="e8z-75-8Wj"/>
                 <constraint firstItem="F8B-7k-VH6" firstAttribute="top" secondItem="nFV-pt-TOc" secondAttribute="top" constant="35" id="e9R-sC-u1y"/>
+                <constraint firstItem="CJD-4E-44S" firstAttribute="top" secondItem="Q54-Kj-jcg" secondAttribute="top" constant="10" id="jdd-Za-LwC"/>
+                <constraint firstItem="Q54-Kj-jcg" firstAttribute="trailing" secondItem="CJD-4E-44S" secondAttribute="trailing" constant="15" id="lA8-uf-AEO"/>
                 <constraint firstItem="Q54-Kj-jcg" firstAttribute="top" secondItem="nFV-pt-TOc" secondAttribute="top" constant="5" id="lKc-6s-fg9"/>
                 <constraint firstItem="Q54-Kj-jcg" firstAttribute="trailing" secondItem="o9r-bF-8rg" secondAttribute="trailing" id="xdY-33-w8g"/>
                 <constraint firstItem="JZk-q0-fU5" firstAttribute="leading" secondItem="F8B-7k-VH6" secondAttribute="trailing" constant="10" id="zF4-39-H4Y"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="acctName" destination="2Rm-wW-I7g" id="HjA-bQ-fkb"/>
+                <outlet property="amount" destination="96w-I9-V5G" id="eD4-3a-5HD"/>
                 <outlet property="background" destination="Q54-Kj-jcg" id="sev-gR-5jX"/>
+                <outlet property="userImgs" destination="F8B-7k-VH6" id="8h4-Fs-YgV"/>
             </connections>
             <point key="canvasLocation" x="64.885496183206101" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
-        <image name="friends.png" width="20.727272033691406" height="20.727272033691406"/>
+        <image name="logo.png" width="20.727272033691406" height="20.727272033691406"/>
         <image name="more.png" width="54.545455932617188" height="54.545455932617188"/>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>

@@ -222,6 +222,8 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="acctName" destination="6cx-DE-1Vb" id="IeD-hH-dVt"/>
+                <outlet property="amount" destination="sHy-AL-Uwt" id="ZNp-k2-5ob"/>
                 <outlet property="background" destination="d4A-z1-xOt" id="hnQ-zQ-iLo"/>
             </connections>
             <point key="canvasLocation" x="64.885496183206101" y="20.422535211267608"/>

@@ -8,11 +8,12 @@
 import UIKit
 
 class MainType0Cell: UITableViewCell {
+    var delegate: MainTypeCellDelegate?
     
     @IBOutlet var background: UIView!
     @IBOutlet weak var button: UIButton!
     
-    var type: Int = -1
+    var type: ButtonType = .OpeningAccount
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,27 +28,30 @@ class MainType0Cell: UITableViewCell {
     // mark : cell 데이터 세팅
     
     func configure(data: AccountInfo) {
-        type = data.btnType!
-        
-        let color = data.backgroundColor
+        type = data.btnType ?? .OpeningAccount
         background.backgroundColor = data.backgroundColor
         
-        if type == 1 {
+        if type == .OpeningAccount {
             let buttonTitle = "+"
             let boldFont = UIFont.boldSystemFont(ofSize: 17)
 
             button.titleLabel?.font = boldFont
             button.setTitle(buttonTitle, for: .normal)
         }else {
-            button.setTitle("화면 편집", for: .normal)
+            let buttonTitle = "화면 편집"
+            let font = UIFont.systemFont(ofSize: 15)
+            
+            button.titleLabel?.font = font
+            button.setTitleColor(.grey, for: .normal)
+            button.setTitle(buttonTitle, for: .normal)
         }
     }
     
     @IBAction func buttonClick(_ sender: UIButton) {
-        if type == 1 {
-            print("type 1 button Click")
-        }else {
-            print("type 2 button Click")
+        if type == .OpeningAccount {
+            delegate?.moveButtonClicked(isModal: true)
+        }else { // 화면 편집 모달
+            delegate?.moveButtonClicked(isModal: false)
         }
     }
     
