@@ -10,18 +10,19 @@ import UIKit
 class TempNextViewController: UIViewController {
 
     var isModal: Bool = true
+    @IBOutlet weak var closeBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if !isModal {
+            tabBarController?.tabBar.isHidden = true
+            closeBtn.isHidden = true
+        }
     }
     
     @IBAction func cloaseBtnClick(_ sender: UIButton) {
         if isModal {
             self.dismiss(animated: true)
-        }else{
-            navigationController?.popViewController(animated: true)
         }
     }
 }

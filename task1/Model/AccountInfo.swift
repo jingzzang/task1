@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MainCellItem {
+struct AccountInfo {
     var type: Int
     var btnType: Int?
     var accountName: String

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TempNextViewController" customModule="task1" customModuleProvider="target">
             <connections>
+                <outlet property="closeBtn" destination="HaA-PI-BEN" id="Dbn-MT-3M8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Vgm-xX-XEQ"/>
             </connections>
         </placeholder>
