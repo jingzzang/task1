@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountNameEditingViewController" customModule="task1" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="EuO-Sy-Ktc" id="4jD-LZ-dur"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="EuO-Sy-Ktc">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAc-8T-luL">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoA-mc-DjJ">
+                            <rect key="frame" x="343" y="9" width="30" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="취소">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="IoA-mc-DjJ" secondAttribute="trailing" constant="20" id="Kzs-Kk-Egz"/>
+                        <constraint firstItem="IoA-mc-DjJ" firstAttribute="centerY" secondItem="jAc-8T-luL" secondAttribute="centerY" id="sva-cm-jyM"/>
+                        <constraint firstAttribute="height" constant="50" id="tOV-wq-U9y"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fL-I2-CiS">
+                    <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dEo-LU-6Uv">
+                            <rect key="frame" x="20" y="15.333333333333329" width="353" height="69.666666666666671"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Accout Name" borderStyle="roundedRect" placeholder="Accout Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="asl-p8-xHM">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15/15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTO-83-WdL">
+                                    <rect key="frame" x="0.0" y="54" width="353" height="15.666666666666671"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                    <color key="textColor" systemColor="systemGray2Color"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="dEo-LU-6Uv" firstAttribute="centerY" secondItem="9fL-I2-CiS" secondAttribute="centerY" id="0TX-JV-1Rg"/>
+                        <constraint firstItem="dEo-LU-6Uv" firstAttribute="leading" secondItem="9fL-I2-CiS" secondAttribute="leading" constant="20" id="7iS-hK-XxF"/>
+                        <constraint firstAttribute="trailing" secondItem="dEo-LU-6Uv" secondAttribute="trailing" constant="20" id="ROC-sK-kJf"/>
+                        <constraint firstAttribute="height" constant="100" id="e7j-Ir-g0d"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="l4L-4R-sfr"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jAc-8T-luL" firstAttribute="leading" secondItem="l4L-4R-sfr" secondAttribute="leading" id="43t-kr-cJX"/>
+                <constraint firstItem="9fL-I2-CiS" firstAttribute="leading" secondItem="l4L-4R-sfr" secondAttribute="leading" id="Con-nN-j4I"/>
+                <constraint firstItem="l4L-4R-sfr" firstAttribute="trailing" secondItem="jAc-8T-luL" secondAttribute="trailing" id="Eoc-86-NlF"/>
+                <constraint firstItem="l4L-4R-sfr" firstAttribute="trailing" secondItem="9fL-I2-CiS" secondAttribute="trailing" id="Xa1-F5-5Eg"/>
+                <constraint firstItem="jAc-8T-luL" firstAttribute="top" secondItem="EuO-Sy-Ktc" secondAttribute="top" id="aMS-Yz-WL1"/>
+                <constraint firstItem="9fL-I2-CiS" firstAttribute="top" secondItem="jAc-8T-luL" secondAttribute="bottom" id="vEF-N9-3dS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="101.5267175572519" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

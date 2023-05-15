@@ -56,13 +56,21 @@ extension MainViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let idx = data[indexPath.row]
         if idx == 0 {
-            return tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType0Cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType0Cell
+//            cell.delegate = self
+            return cell
         }else if idx == 1 {
-            return tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType1Cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType1Cell
+            cell.delegate = self
+            return cell
         }else if idx == 2 {
-            return tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType2Cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType2Cell
+//            cell.delegate = self
+            return cell
         }else {
-            return tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType3Cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellTypes[idx], for: indexPath) as! MainType3Cell
+//            cell.delegate = self
+            return cell
         }
     }
 }
@@ -71,5 +79,24 @@ extension MainViewController {
 extension MainViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //
+    }
+}
+
+extension MainViewController: MainTypeCellDelegate {
+    func moreButtonClicked(isWithoutTheAcctNum: Bool) {
+        let vc = AccountOptionViewController(isWithoutTheAcctNum: isWithoutTheAcctNum)
+        present(vc, animated: true)
+    }
+    
+    //temporary function
+    func moveButtonClicked(isModal: Bool){
+        let vc = TempNextViewController()
+        vc.isModal = isModal
+        if isModal {
+            vc.modalPresentationStyle = .overFullScreen
+            present(vc, animated: true)
+        }else {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
