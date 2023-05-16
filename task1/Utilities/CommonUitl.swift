@@ -8,18 +8,18 @@
 import UIKit
 
 final class CommonUtil {
+    let colorArray: [UIColor] = [.daisyDaisy, .blackWhite, .dustStorm, .copper,
+                                 .coralCandy, .illusion, .indianRed, .cabaret,
+                                 .echoBlue, .violetBlue, .dustStorm, .chetwodeBlue,
+                                 .iceBerg, .mantis, .fern, .lochinvar,
+                                 .solitude, .patternsBlue, .regentStBlue, .fountainBlue,
+                                 .malibu, .havelockBlue, .royalBlue, .cornflowerBlue,
+                                 .juniper, .airForceBlue, .lochmara, .bahamaBlue,
+                                 .kashmirBlue,.shuttleGrey,.mortar, .schooner,
+                                 .cloud, .auChico]
+    
     func pickRandom() -> UIColor {
-        let bgColorArray: [[UIColor]] = [[.daisyDaisy, .blackWhite, .dustStorm, .copper],
-                                         [.coralCandy, .illusion, .indianRed, .cabaret],
-                                         [.echoBlue, .violetBlue, .dustStorm, .chetwodeBlue],
-                                         [.iceBerg, .mantis, .fern, .lochinvar],
-                                         [.solitude, .patternsBlue, .regentStBlue, .fountainBlue],
-                                         [.malibu, .havelockBlue, .royalBlue, .cornflowerBlue],
-                                         [.juniper, .airForceBlue, .lochmara, .bahamaBlue],
-                                         [.kashmirBlue,.shuttleGrey,.mortar, .schooner],
-                                         [.cloud, .auChico]]
-        let colorRow = Int.random(in: 0 ..< bgColorArray.count)
-        let colorCol = Int.random(in: 0 ..< bgColorArray[colorRow].count)
-        return bgColorArray[colorRow][colorCol]
+        let idx = Int.random(in: 0 ..< colorArray.count)
+        return colorArray[idx]
     }
 }

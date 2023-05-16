@@ -16,13 +16,14 @@ class TempNextViewController: UIViewController {
         super.viewDidLoad()
         if !isModal {
             tabBarController?.tabBar.isHidden = true
-            closeBtn.isHidden = true
         }
     }
     
     @IBAction func cloaseBtnClick(_ sender: UIButton) {
         if isModal {
             self.dismiss(animated: true)
+        }else {
+            navigationController?.popViewController(animated: true)
         }
     }
 }

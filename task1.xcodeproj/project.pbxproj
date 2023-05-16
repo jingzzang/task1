@@ -12,6 +12,9 @@
 		3F380BD72A121AC40028FEB1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F380BD62A121AC40028FEB1 /* StringExtension.swift */; };
 		3F44CE6D2A11DC9600D20F91 /* TempNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44CE6B2A11DC9600D20F91 /* TempNextViewController.swift */; };
 		3F44CE6E2A11DC9600D20F91 /* TempNextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F44CE6C2A11DC9600D20F91 /* TempNextViewController.xib */; };
+		3F82C5FE2A13BE9E003AE05B /* ColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F82C5FD2A13BE9E003AE05B /* ColorCell.xib */; };
+		3F82C6022A13C4D0003AE05B /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82C6012A13C4D0003AE05B /* ColorCell.swift */; };
+		3F82C6062A13D11C003AE05B /* colorCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F82C6052A13D11C003AE05B /* colorCheck.png */; };
 		3F8772042A105F9E00180BED /* AccountOptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F8772032A105F9E00180BED /* AccountOptionView.xib */; };
 		3F8772062A10604400180BED /* AccountNameEditingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F8772052A10604400180BED /* AccountNameEditingView.xib */; };
 		3F8772082A1061C500180BED /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F8772072A1061C500180BED /* close.png */; };
@@ -63,6 +66,9 @@
 		3F380BD62A121AC40028FEB1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		3F44CE6B2A11DC9600D20F91 /* TempNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNextViewController.swift; sourceTree = "<group>"; };
 		3F44CE6C2A11DC9600D20F91 /* TempNextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TempNextViewController.xib; sourceTree = "<group>"; };
+		3F82C5FD2A13BE9E003AE05B /* ColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCell.xib; sourceTree = "<group>"; };
+		3F82C6012A13C4D0003AE05B /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		3F82C6052A13D11C003AE05B /* colorCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colorCheck.png; sourceTree = "<group>"; };
 		3F8772032A105F9E00180BED /* AccountOptionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountOptionView.xib; sourceTree = "<group>"; };
 		3F8772052A10604400180BED /* AccountNameEditingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountNameEditingView.xib; sourceTree = "<group>"; };
 		3F8772072A1061C500180BED /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
@@ -147,6 +153,8 @@
 				3F93F83A2A0F07AE00774277 /* AdsModal.xib */,
 				3F8772032A105F9E00180BED /* AccountOptionView.xib */,
 				3F8772052A10604400180BED /* AccountNameEditingView.xib */,
+				3F82C5FD2A13BE9E003AE05B /* ColorCell.xib */,
+				3F82C6012A13C4D0003AE05B /* ColorCell.swift */,
 			);
 			path = MainGroup;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 		5037E7302A09219500257514 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				3F82C6052A13D11C003AE05B /* colorCheck.png */,
 				3F8772072A1061C500180BED /* close.png */,
 				3F93F83E2A0F0DA300774277 /* ads.png */,
 				507589692A0D2EED007FD385 /* product.png */,
@@ -346,6 +355,7 @@
 				3F8772062A10604400180BED /* AccountNameEditingView.xib in Resources */,
 				5037E73B2A09CFE500257514 /* profile.png in Resources */,
 				507589682A0D233A007FD385 /* character.png in Resources */,
+				3F82C5FE2A13BE9E003AE05B /* ColorCell.xib in Resources */,
 				3F93F83F2A0F0DA300774277 /* ads.png in Resources */,
 				3F93F83B2A0F07AE00774277 /* AdsModal.xib in Resources */,
 				505D571D2A09156C0047CE1B /* LaunchScreen.storyboard in Resources */,
@@ -355,6 +365,7 @@
 				507589522A0C515E007FD385 /* MainType1Cell.xib in Resources */,
 				5075895C2A0D0E93007FD385 /* MainType3Cell.xib in Resources */,
 				507589622A0D1335007FD385 /* more.png in Resources */,
+				3F82C6062A13D11C003AE05B /* colorCheck.png in Resources */,
 				507589642A0D17B6007FD385 /* logo.png in Resources */,
 				507589502A0C514C007FD385 /* MainType0Cell.xib in Resources */,
 				3F44CE6E2A11DC9600D20F91 /* TempNextViewController.xib in Resources */,
@@ -391,6 +402,7 @@
 				5050197C2A0AFD9F00C08A38 /* SettingsViewController.swift in Sources */,
 				505D57112A09156B0047CE1B /* AppDelegate.swift in Sources */,
 				505019782A0AFD8000C08A38 /* ServiceViewController.swift in Sources */,
+				3F82C6022A13C4D0003AE05B /* ColorCell.swift in Sources */,
 				505019802A0AFE0000C08A38 /* HistoryViewController.swift in Sources */,
 				5075895E2A0D0EA3007FD385 /* MainType3Cell.swift in Sources */,
 				3F380BD22A11E9AC0028FEB1 /* DataManager.swift in Sources */,

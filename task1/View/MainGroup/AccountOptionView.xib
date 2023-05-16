@@ -10,6 +10,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountOptionViewController" customModule="task1" customModuleProvider="target">
             <connections>
+                <outlet property="WithAcctscrollView" destination="Ovr-Oa-rQY" id="OIv-Be-9FZ"/>
+                <outlet property="WithoutAcctscrollView" destination="H12-n5-JsO" id="WDI-nR-Ito"/>
+                <outlet property="colorCollectionView" destination="zXD-oc-aX1" id="1Ez-RE-AHX"/>
+                <outlet property="colorsView" destination="NZc-fO-73u" id="WWw-ih-8IP"/>
+                <outlet property="contentView" destination="9KC-r5-nhc" id="vvG-O7-KsQ"/>
+                <outlet property="contentWithAcctView" destination="hZm-Nr-10X" id="PWK-gr-oUE"/>
+                <outlet property="contentWithoutAcctView" destination="9bs-wO-Ev4" id="Y7Y-Nu-ddh"/>
                 <outlet property="view" destination="iN0-l3-epB" id="hq3-Dm-l4z"/>
             </connections>
         </placeholder>
@@ -40,10 +47,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zgg-PU-39g" userLabel="AcctName">
-                    <rect key="frame" x="0.0" y="50" width="393" height="55"/>
+                    <rect key="frame" x="0.0" y="50" width="393" height="35"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhA-kh-ZuF">
-                            <rect key="frame" x="20" y="11.666666666666664" width="110" height="32"/>
+                            <rect key="frame" x="20" y="1.6666666666666643" width="110" height="32"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계좌이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKR-jH-pJE">
                                     <rect key="frame" x="0.0" y="0.0" width="72.666666666666671" height="32"/>
@@ -63,13 +70,13 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="55" id="E2o-sh-8YR"/>
+                        <constraint firstAttribute="height" constant="35" id="E2o-sh-8YR"/>
                         <constraint firstItem="QhA-kh-ZuF" firstAttribute="centerY" secondItem="Zgg-PU-39g" secondAttribute="centerY" id="W3c-EZ-Pgx"/>
                         <constraint firstItem="QhA-kh-ZuF" firstAttribute="leading" secondItem="Zgg-PU-39g" secondAttribute="leading" constant="20" id="XQ4-cd-7j0"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9KC-r5-nhc" userLabel="Content">
-                    <rect key="frame" x="0.0" y="105" width="393" height="747"/>
+                    <rect key="frame" x="0.0" y="85" width="393" height="767"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
@@ -97,8 +104,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCf-BZ-9yC">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="fpu-AL-mjf">
-                            <rect key="frame" x="20.000000000000028" y="14.666666666666664" width="269.33333333333331" height="32"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="fpu-AL-mjf">
+                            <rect key="frame" x="20" y="9" width="269.33333333333331" height="32"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="입출금 000-0000-0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pi6-PF-o5W">
                                     <rect key="frame" x="0.0" y="0.0" width="183.33333333333334" height="32"/>
@@ -122,6 +129,8 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="8tB-at-Zas"/>
+                        <constraint firstItem="fpu-AL-mjf" firstAttribute="centerY" secondItem="mCf-BZ-9yC" secondAttribute="centerY" id="YFJ-gD-LRe"/>
+                        <constraint firstItem="fpu-AL-mjf" firstAttribute="leading" secondItem="mCf-BZ-9yC" secondAttribute="leading" constant="20" id="m1j-SC-Oge"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ovr-Oa-rQY">
@@ -167,7 +176,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7fk-j3-eSW">
-                        <size key="itemSize" width="128" height="128"/>
+                        <size key="itemSize" width="80" height="60"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -182,7 +191,7 @@
                 <constraint firstItem="zXD-oc-aX1" firstAttribute="top" secondItem="NZc-fO-73u" secondAttribute="top" id="pit-To-Rl1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="1518" y="365"/>
+            <point key="canvasLocation" x="1513.7404580152672" y="364.78873239436621"/>
         </view>
     </objects>
     <resources>
