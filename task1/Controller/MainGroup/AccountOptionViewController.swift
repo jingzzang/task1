@@ -76,6 +76,8 @@ class AccountOptionViewController: UIViewController {
     // mark : 상단 확인 버튼 Click Action
     
     @IBAction func confirmBtnClick(_ sender: UIButton) {
+        NotificationCenter.default.post(name: NSNotification.Name("showMain"), object: false)
+        
         self.dismiss(animated: true)
     }
     

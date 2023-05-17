@@ -23,6 +23,8 @@ class AccountNameEditingViewController: UIViewController {
     
     
     @IBAction func cancelBtnClick(_ sender: UIButton) {
+        NotificationCenter.default.post(name: NSNotification.Name("showMain"), object: false)
+        
         self.dismiss(animated: true)
     }
 }
