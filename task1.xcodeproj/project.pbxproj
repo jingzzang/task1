@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1E2AE32A150259004389D4 /* ToastVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E2AE22A150259004389D4 /* ToastVIew.swift */; };
+		3F1E2AE72A1504C7004389D4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E2AE62A1504C7004389D4 /* Notification.swift */; };
+		3F1E2AF12A152796004389D4 /* toastClose.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1E2AF02A152796004389D4 /* toastClose.png */; };
 		3F380BD22A11E9AC0028FEB1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F380BD12A11E9AC0028FEB1 /* DataManager.swift */; };
 		3F380BD42A11F3E10028FEB1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F380BD32A11F3E10028FEB1 /* UIColorExtension.swift */; };
 		3F380BD72A121AC40028FEB1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F380BD62A121AC40028FEB1 /* StringExtension.swift */; };
@@ -61,6 +64,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F1E2AE22A150259004389D4 /* ToastVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastVIew.swift; sourceTree = "<group>"; };
+		3F1E2AE62A1504C7004389D4 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		3F1E2AF02A152796004389D4 /* toastClose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toastClose.png; sourceTree = "<group>"; };
 		3F380BD12A11E9AC0028FEB1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3F380BD32A11F3E10028FEB1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		3F380BD62A121AC40028FEB1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 			children = (
 				3F380BD32A11F3E10028FEB1 /* UIColorExtension.swift */,
 				3F380BD62A121AC40028FEB1 /* StringExtension.swift */,
+				3F1E2AE62A1504C7004389D4 /* Notification.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -182,6 +189,7 @@
 		5037E7302A09219500257514 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				3F1E2AF02A152796004389D4 /* toastClose.png */,
 				3F82C6052A13D11C003AE05B /* colorCheck.png */,
 				3F8772072A1061C500180BED /* close.png */,
 				3F93F83E2A0F0DA300774277 /* ads.png */,
@@ -206,6 +214,7 @@
 				5050197D2A0AFDEB00C08A38 /* History.xib */,
 				505019862A0B00FB00C08A38 /* Settings.xib */,
 				505019882A0B8A0300C08A38 /* Login.xib */,
+				3F1E2AE22A150259004389D4 /* ToastVIew.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,6 +383,7 @@
 				507589662A0D19BE007FD385 /* friends.png in Resources */,
 				3F8772042A105F9E00180BED /* AccountOptionView.xib in Resources */,
 				505D571A2A09156C0047CE1B /* Assets.xcassets in Resources */,
+				3F1E2AF12A152796004389D4 /* toastClose.png in Resources */,
 				505019892A0B8A0300C08A38 /* Login.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +407,7 @@
 				3F87720A2A10666E00180BED /* AccountNameEditingViewController.swift in Sources */,
 				5075895A2A0D0E88007FD385 /* MainType2Cell.swift in Sources */,
 				505019902A0BB44300C08A38 /* Data.swift in Sources */,
+				3F1E2AE72A1504C7004389D4 /* Notification.swift in Sources */,
 				505019842A0AFEC300C08A38 /* CommonUitl.swift in Sources */,
 				507589372A0BE8C2007FD385 /* AccountInfo.swift in Sources */,
 				5050197C2A0AFD9F00C08A38 /* SettingsViewController.swift in Sources */,
@@ -407,6 +418,7 @@
 				5075895E2A0D0EA3007FD385 /* MainType3Cell.swift in Sources */,
 				3F380BD22A11E9AC0028FEB1 /* DataManager.swift in Sources */,
 				505D57132A09156B0047CE1B /* SceneDelegate.swift in Sources */,
+				3F1E2AE32A150259004389D4 /* ToastVIew.swift in Sources */,
 				3F380BD72A121AC40028FEB1 /* StringExtension.swift in Sources */,
 				3F87720C2A10668900180BED /* AccountOptionViewController.swift in Sources */,
 			);

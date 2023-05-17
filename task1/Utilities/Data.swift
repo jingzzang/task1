@@ -11,7 +11,6 @@ import Foundation
 
 class Data {
     static let shared = Data()
-    static var acctInfoData = DataManager().getAcctInfo()
     
     var isLogin: Bool = false
     var showAds: Bool = true

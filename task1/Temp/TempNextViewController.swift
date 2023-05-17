@@ -20,6 +20,8 @@ class TempNextViewController: UIViewController {
     }
     
     @IBAction func cloaseBtnClick(_ sender: UIButton) {
+        NotificationCenter.default.post(name: NSNotification.Name("showMain"), object: false)
+        
         if isModal {
             self.dismiss(animated: true)
         }else {

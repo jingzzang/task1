@@ -48,6 +48,6 @@ class MainType3Cell: UITableViewCell {
     }
     
     @IBAction func moreBtnClick(_ sender: UIButton) {
-        delegate?.moreButtonClicked(isWithoutTheAcctNum: false)
+        delegate?.moreButtonClicked(isWithoutTheAcctNum: false, acctInfo: data)
     }
 }

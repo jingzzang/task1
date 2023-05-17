@@ -36,7 +36,7 @@ class MainType1Cell: UITableViewCell {
     }
     
     @IBAction func moreBtnClick(_ sender: UIButton) {
-        delegate?.moreButtonClicked(isWithoutTheAcctNum: false)
+        delegate?.moreButtonClicked(isWithoutTheAcctNum: false, acctInfo: data)
     }
     
     @IBAction func cardBtnClick(_ sender: UIButton) {
@@ -61,7 +61,7 @@ class MainType1Cell: UITableViewCell {
 }
 
 protocol MainTypeCellDelegate: AnyObject {
-    func moreButtonClicked(isWithoutTheAcctNum: Bool)
+    func moreButtonClicked(isWithoutTheAcctNum: Bool, acctInfo: AccountInfo?)
     
     //temp function
     func moveButtonClicked(isModal: Bool)

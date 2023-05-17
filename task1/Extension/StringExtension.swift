@@ -32,4 +32,11 @@ extension String {
         
         return won+"원"
     }
+    
+    /* Clipboard 이체 여부 체크 */
+    
+    func isAccountNumber() -> Bool {
+        // 정규식 처리 추가
+        return self.count > 0
+    }
 }

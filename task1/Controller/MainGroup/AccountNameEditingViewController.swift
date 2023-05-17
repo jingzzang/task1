@@ -8,10 +8,35 @@
 import UIKit
 
 class AccountNameEditingViewController: UIViewController {
-
+    
+    @IBOutlet weak var AcctNameTextField: UITextField!
+    
+    var data: AccountInfo?
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        AcctNameTextField.text = data?.accountName ?? ""
+        AcctNameTextField.returnKeyType = .done // Keyboard 완료 키
         
+        AcctNameTextField.delegate = self
+        AcctNameTextField.becomeFirstResponder()
     }
+    
+    
+    @IBAction func cancelBtnClick(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+}
 
+extension AccountNameEditingViewController: UITextFieldDelegate {
+    // 리턴 키가 눌러졌을 때 호출
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        data?.accountName = AcctNameTextField.text!
+        DataManager.updateAcctInfoData(data: data!)
+        textField.resignFirstResponder()
+        let needReload: Bool = true
+        self.dismiss(animated: true){
+            NotificationCenter.default.post(name: NSNotification.Name("showMain"), object: needReload)
+        }
+        return true
+    }
 }

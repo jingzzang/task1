@@ -12,6 +12,8 @@
             <connections>
                 <outlet property="WithAcctscrollView" destination="Ovr-Oa-rQY" id="OIv-Be-9FZ"/>
                 <outlet property="WithoutAcctscrollView" destination="H12-n5-JsO" id="WDI-nR-Ito"/>
+                <outlet property="acctName" destination="nKR-jH-pJE" id="vpI-VZ-OdD"/>
+                <outlet property="acctNum" destination="pi6-PF-o5W" id="gqf-RT-2L7"/>
                 <outlet property="colorCollectionView" destination="zXD-oc-aX1" id="1Ez-RE-AHX"/>
                 <outlet property="colorsView" destination="NZc-fO-73u" id="WWw-ih-8IP"/>
                 <outlet property="contentView" destination="9KC-r5-nhc" id="vvG-O7-KsQ"/>
@@ -64,6 +66,9 @@
                                     <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="pencil" catalog="system"/>
+                                    <connections>
+                                        <action selector="renameBtnClock:" destination="-1" eventType="touchUpInside" id="8oK-9L-e1K"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -122,6 +127,9 @@
                                     <state key="normal" title="복사하기">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
+                                    <connections>
+                                        <action selector="copyButtonClick:" destination="-1" eventType="touchUpInside" id="euL-Cy-Qd5"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

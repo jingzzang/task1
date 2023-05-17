@@ -12,9 +12,12 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var contentView: UITableView!
     @IBOutlet var contentBaseView: UIView!
     
+    @IBOutlet var clipboardView: UIView!
+    @IBOutlet weak var clipboardStringLabel: UILabel!
+    
     let cellTypes = ["MainType0Cell", "MainType1Cell", "MainType2Cell", "MainType3Cell"]
     
-    var testData: [AccountInfo] = []
+    let pasteboard = UIPasteboard.general
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +32,9 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
         contentView.delegate = self
         contentView.dataSource = self
         
-        testData = DataManager().getAcctInfo()
+        NotificationCenter.default.addObserver(self, selector: #selector(showMain), name: NSNotification.Name("showMain"), object: nil)
+        
+        checkClipboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,17 +53,44 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
                 })
             }
         }
+        
+        checkClipboard()
     }
+    
+    @objc func showMain(_ notification: Notification) {
+        print("call ShowMain Observer")
+        if let needReload = notification.object as? Bool, needReload {
+            contentView.reloadData()
+        }else {
+            checkClipboard()
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @IBAction func clipboardTransferBtnClick(_ sender: UIButton) {
+        let vc = TempNextViewController()
+        vc.isModal = false
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func clipboardCloseClick(_ sender: UIButton) {
+        clipboardView.removeFromSuperview()
+        pasteboard.string = nil
+    }
+    
 }
 
 // UITableViewDataSource
 extension MainViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testData.count
+        return DataManager.acctInfoData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = testData[indexPath.row]
+        let data = DataManager.acctInfoData[indexPath.row]
         let type = data.type
         if type == .Default {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MainType0Cell", for: indexPath) as! MainType0Cell
@@ -91,9 +123,12 @@ extension MainViewController {
     }
 }
 
+// mark : 테이블 뷰 셀 Delegate
+
 extension MainViewController: MainTypeCellDelegate {
-    func moreButtonClicked(isWithoutTheAcctNum: Bool) {
-        let vc = AccountOptionViewController(isWithoutTheAcctNum: isWithoutTheAcctNum)
+    func moreButtonClicked(isWithoutTheAcctNum: Bool, acctInfo: AccountInfo?) {
+        let vc = AccountOptionViewController(isWithoutTheAcctNum: isWithoutTheAcctNum, acctInfo: acctInfo)
+        vc.modalPresentationStyle = .formSheet
         present(vc, animated: true)
     }
     
@@ -106,6 +141,33 @@ extension MainViewController: MainTypeCellDelegate {
             present(vc, animated: true)
         }else {
             navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func checkClipboard() {
+        if let str = pasteboard.string, str.isAccountNumber() {
+            clipboardView.layer.cornerRadius = 8
+            clipboardStringLabel.text = str
+            clipboardView.alpha = 0
+            
+            view.addSubview(clipboardView)
+            
+            clipboardView.translatesAutoresizingMaskIntoConstraints = false
+            
+            NSLayoutConstraint.activate([
+                clipboardView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                clipboardView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                clipboardView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+                clipboardView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: tabBarController!.tabBar.frame.height-90),
+                clipboardView.heightAnchor.constraint(equalToConstant: 60)
+            ])
+            
+            UIView.animate(withDuration: 1.0, delay: 0.3, options: .curveEaseInOut,
+                           animations: {
+                                self.clipboardView.alpha = 1.0
+                            }, completion:{_ in
+                                //nothing
+                            })
         }
     }
 }

@@ -10,9 +10,11 @@ import UIKit
 class AccountOptionViewController: UIViewController {
 
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var acctName: UILabel!
     
     @IBOutlet var contentWithAcctView: UIView!
     @IBOutlet weak var WithAcctscrollView: UIScrollView!
+    @IBOutlet weak var acctNum: UILabel!
     
     @IBOutlet var contentWithoutAcctView: UIView!
     @IBOutlet weak var WithoutAcctscrollView: UIScrollView!
@@ -21,10 +23,12 @@ class AccountOptionViewController: UIViewController {
     @IBOutlet weak var colorCollectionView: UICollectionView!
     
     private var isWithoutTheAcctNum: Bool = false
+    private var data: AccountInfo?
     
-    init(isWithoutTheAcctNum: Bool) {
+    init(isWithoutTheAcctNum: Bool, acctInfo: AccountInfo?) {
         super.init(nibName: "AccountOptionView", bundle: nil)
         self.isWithoutTheAcctNum = isWithoutTheAcctNum
+        self.data = acctInfo
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,6 +41,8 @@ class AccountOptionViewController: UIViewController {
         colorCollectionView.dataSource = self
         colorCollectionView.register(UINib(nibName: "ColorCell", bundle: nil), forCellWithReuseIdentifier: "ColorCell")
         
+        acctName.text = data?.accountName ?? ""
+        
         if isWithoutTheAcctNum {
             WithoutAcctscrollView.addSubview(colorsView)
             contentView.addSubview(contentWithoutAcctView)
@@ -44,10 +50,43 @@ class AccountOptionViewController: UIViewController {
             WithAcctscrollView.addSubview(colorsView)
             contentView.addSubview(contentWithAcctView)
         }
+        
+        
     }
+    
+    @IBAction func renameBtnClock(_ sender: UIButton) {
+        /*
+         * MainViewController > AccountOptionViewController > AccountNameEditingViewController
+         * dismiss(vc) : presentedViewController를 dismiss시키는 메소드.
+         *               다만, presentedViewController가 없으면 자신을 dismiss 시킴.
+         */
+        weak var pvc = self.presentingViewController
+        
+        self.dismiss(animated: true, completion: {
+            let vc = AccountNameEditingViewController()
+            /*
+             * 1. dismiss 호출 시점에 presentedViewController이 없어 자신이 dismiss됨
+             * 2. dismiss 후 MainViewController(presentingViewController)로 AccountNameEditingViewController(presentedViewController)를 띄우게 함.
+             */
+            vc.data = self.data
+            pvc?.present(vc, animated: true, completion: nil)
+        })
+    }
+    
+    // mark : 상단 확인 버튼 Click Action
     
     @IBAction func confirmBtnClick(_ sender: UIButton) {
         self.dismiss(animated: true)
+    }
+    
+    // mark : 계좌번호 복사하기 버튼 Click Action
+    
+    @IBAction func copyButtonClick(_ sender: UIButton) {
+        let pasteboard = UIPasteboard.general
+
+        pasteboard.string = acctNum.text
+        
+        view.showToast(msg: "계좌번호가 복사되었습니다.")
     }
 }
 
