@@ -58,7 +58,6 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @objc func showMain(_ notification: Notification) {
-        print("call ShowMain Observer")
         if let needReload = notification.object as? Bool, needReload {
             contentView.reloadData()
         }else {

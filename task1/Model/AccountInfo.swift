@@ -40,3 +40,4 @@ struct AccountInfo {
     var moneyboxYn: Bool?           // 저금통 여부
     var safeboxYn: Bool?            // 세이프박스 여부
 }
+

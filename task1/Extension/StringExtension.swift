@@ -36,7 +36,8 @@ extension String {
     /* Clipboard 이체 여부 체크 */
     
     func isAccountNumber() -> Bool {
+        let onlyNums = self.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
         // 정규식 처리 추가
-        return self.count > 0
+        return onlyNums.count > 5
     }
 }

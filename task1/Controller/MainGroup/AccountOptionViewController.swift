@@ -42,6 +42,7 @@ class AccountOptionViewController: UIViewController {
         colorCollectionView.register(UINib(nibName: "ColorCell", bundle: nil), forCellWithReuseIdentifier: "ColorCell")
         
         acctName.text = data?.accountName ?? ""
+        acctNum.text = getWholeAccountNum()
         
         if isWithoutTheAcctNum {
             WithoutAcctscrollView.addSubview(colorsView)
@@ -90,6 +91,19 @@ class AccountOptionViewController: UIViewController {
         
         view.showToast(msg: "계좌번호가 복사되었습니다.")
     }
+    
+    private func getWholeAccountNum() -> String {
+        let type = data?.type ?? .Default
+        let wholeAcctNum = data?.accountNum ?? ""
+        switch type {
+        case .Deposit:
+            return "입출금 \(wholeAcctNum)"
+        case .Saving:
+            return "예적금 \(wholeAcctNum)"
+        default:
+            return ""
+        }
+    }
 }
 
 extension AccountOptionViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -108,3 +122,4 @@ extension AccountOptionViewController: UICollectionViewDelegate, UICollectionVie
         return cell ?? UICollectionViewCell()
     }
 }
+
