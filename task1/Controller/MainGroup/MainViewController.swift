@@ -153,13 +153,12 @@ extension MainViewController: MainTypeCellDelegate {
             
             clipboardView.translatesAutoresizingMaskIntoConstraints = false
             
-            NSLayoutConstraint.activate([
-                clipboardView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                clipboardView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-                clipboardView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-                clipboardView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: tabBarController!.tabBar.frame.height-90),
-                clipboardView.heightAnchor.constraint(equalToConstant: 60)
-            ])
+            clipboardView.setConstraintsCentrallyX(view)
+            clipboardView.setConstraints(left: Constraint(view, constant: 20),
+                                        bottom: Constraint(view.safeAreaLayoutGuide.bottomAnchor,
+                                                           constant: tabBarController!.tabBar.frame.height-90),
+                                        right: Constraint(view, constant: -20),
+                                        height: 60)
             
             UIView.animate(withDuration: 1.0, delay: 0.3, options: .curveEaseInOut,
                            animations: {

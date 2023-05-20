@@ -15,6 +15,7 @@
 		3F380BD72A121AC40028FEB1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F380BD62A121AC40028FEB1 /* StringExtension.swift */; };
 		3F44CE6D2A11DC9600D20F91 /* TempNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44CE6B2A11DC9600D20F91 /* TempNextViewController.swift */; };
 		3F44CE6E2A11DC9600D20F91 /* TempNextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F44CE6C2A11DC9600D20F91 /* TempNextViewController.xib */; };
+		3F50FA022A16D939007288E8 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50FA012A16D939007288E8 /* Constraints.swift */; };
 		3F82C5FE2A13BE9E003AE05B /* ColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F82C5FD2A13BE9E003AE05B /* ColorCell.xib */; };
 		3F82C6022A13C4D0003AE05B /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82C6012A13C4D0003AE05B /* ColorCell.swift */; };
 		3F82C6062A13D11C003AE05B /* colorCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F82C6052A13D11C003AE05B /* colorCheck.png */; };
@@ -72,6 +73,7 @@
 		3F380BD62A121AC40028FEB1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		3F44CE6B2A11DC9600D20F91 /* TempNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempNextViewController.swift; sourceTree = "<group>"; };
 		3F44CE6C2A11DC9600D20F91 /* TempNextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TempNextViewController.xib; sourceTree = "<group>"; };
+		3F50FA012A16D939007288E8 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		3F82C5FD2A13BE9E003AE05B /* ColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCell.xib; sourceTree = "<group>"; };
 		3F82C6012A13C4D0003AE05B /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		3F82C6052A13D11C003AE05B /* colorCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colorCheck.png; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				3F380BD32A11F3E10028FEB1 /* UIColorExtension.swift */,
 				3F380BD62A121AC40028FEB1 /* StringExtension.swift */,
 				3F1E2AE62A1504C7004389D4 /* Notification.swift */,
+				3F50FA012A16D939007288E8 /* Constraints.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				505019702A0A858100C08A38 /* TabViewController.swift in Sources */,
 				505D57152A09156B0047CE1B /* MainViewController.swift in Sources */,
 				3F93F83D2A0F07DD00774277 /* AdsModalViewController.swift in Sources */,
+				3F50FA022A16D939007288E8 /* Constraints.swift in Sources */,
 				3F380BD42A11F3E10028FEB1 /* UIColorExtension.swift in Sources */,
 				3F44CE6D2A11DC9600D20F91 /* TempNextViewController.swift in Sources */,
 				507589542A0C5171007FD385 /* MainType0Cell.swift in Sources */,

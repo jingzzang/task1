@@ -24,6 +24,7 @@ class AccountOptionViewController: UIViewController {
     
     private var isWithoutTheAcctNum: Bool = false
     private var data: AccountInfo?
+    var selectedIndexPath: IndexPath?
     
     init(isWithoutTheAcctNum: Bool, acctInfo: AccountInfo?) {
         super.init(nibName: "AccountOptionView", bundle: nil)
@@ -77,9 +78,13 @@ class AccountOptionViewController: UIViewController {
     // mark : 상단 확인 버튼 Click Action
     
     @IBAction func confirmBtnClick(_ sender: UIButton) {
-        NotificationCenter.default.post(name: NSNotification.Name("showMain"), object: false)
-        
-        self.dismiss(animated: true)
+        if let colorIndx = selectedIndexPath {
+            data?.backgroundColor = CommonUtil().colorArray[colorIndx.row]
+        }
+        DataManager.updateAcctInfoData(data: data!)
+        self.dismiss(animated: true){
+            NotificationCenter.default.post(name: NSNotification.Name("showMain"), object: true)
+        }
     }
     
     // mark : 계좌번호 복사하기 버튼 Click Action
@@ -118,8 +123,30 @@ extension AccountOptionViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = colorCollectionView.dequeueReusableCell(withReuseIdentifier: "ColorCell", for: indexPath) as? ColorCell
         let color =  CommonUtil().colorArray[indexPath.row]
-        cell?.configureUI(color: color, isYours: color == .daisyDaisy)
+        if let selectedIndexPath = selectedIndexPath {
+            cell?.isSelected = selectedIndexPath == indexPath
+        }else {
+            if color == data?.backgroundColor {
+                selectedIndexPath = indexPath
+                cell?.isSelected = true
+            }else {
+                cell?.isSelected = false
+            }
+        }
+        
+        cell?.configureUI(color: color)
         return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("call didSelectItemAt")
+        let deSelectedIndexPath = selectedIndexPath
+        selectedIndexPath = indexPath
+        collectionView.reloadItems(at: [deSelectedIndexPath!, indexPath])
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return indexPath != selectedIndexPath
     }
 }
 

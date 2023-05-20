@@ -16,9 +16,13 @@ class ColorCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
-    func configureUI(color: UIColor, isYours: Bool) {
+    func configureUI(color: UIColor) {
         colorView.layer.cornerRadius = colorView.frame.size.height / 2
         colorView.backgroundColor = color
-        isChecked.isHidden = !isYours
+        isChecked.isHidden = !self.isSelected
+    }
+    
+    func isSelectAction(isHidden: Bool) {
+        isChecked.isHidden = isHidden
     }
 }

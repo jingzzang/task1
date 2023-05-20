@@ -35,9 +35,8 @@ extension AccountNameEditingViewController: UITextFieldDelegate {
         data?.accountName = AcctNameTextField.text!
         DataManager.updateAcctInfoData(data: data!)
         textField.resignFirstResponder()
-        let needReload: Bool = true
         self.dismiss(animated: true){
-            NotificationCenter.default.post(name: NSNotification.Name("showMain"), object: needReload)
+            NotificationCenter.default.post(name: NSNotification.Name("showMain"), object: true)
         }
         return true
     }

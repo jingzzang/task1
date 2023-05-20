@@ -14,11 +14,8 @@ extension UIView {
         
         toast.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            toast.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            toast.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            toast.widthAnchor.constraint(lessThanOrEqualToConstant: 250)
-        ])
+        toast.setConstraintsCentrally(self)
+        toast.setWidthConstraint(width: 250, .less)
         
         /*
          * withDuration : animations 동작 시간
