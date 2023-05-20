@@ -25,13 +25,9 @@ class ToastView: UIView {
         layer.cornerRadius = 8.0
         
         self.addSubview(label)
-        
-        NSLayoutConstraint.activate([
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.0),
-            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.0),
-            label.topAnchor.constraint(equalTo: topAnchor, constant: 8.0),
-            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8.0)
-        ])
+        label.setConstraintsCentrally(top: topAnchor, left: leadingAnchor,
+                                      bottom: bottomAnchor, right: trailingAnchor,
+                                      constant: 8)
         
         label.text = msg
     }

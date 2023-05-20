@@ -60,6 +60,24 @@ struct Constraint {
 }
 
 extension UIView {
+    func setConstraints(top: Constraint? = nil, left: Constraint? = nil, bottom: Constraint? = nil, right: Constraint? = nil) {
+        if let t = top {
+            setTopConstraint(top: t)
+        }
+        
+        if let l = left {
+            setLeftConstraint(left: l)
+        }
+        
+        if let b = bottom {
+            setBottomConstraint(bottom: b)
+        }
+        
+        if let r = right {
+            setRightConstraint(right: r)
+        }
+    }
+    
     func setConstraints(top: Constraint? = nil, left: Constraint? = nil, bottom: Constraint? = nil, right: Constraint? = nil, width: Constraint? = nil, height: Constraint? = nil) {
         if let t = top {
             setTopConstraint(top: t)
@@ -98,6 +116,42 @@ extension UIView {
         }
         
         setSizeConstraints(width: width, height: height)
+    }
+    
+    func setConstraintsCentrally(top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil, constant: CGFloat = 0) {
+        if let t = top {
+            setTopConstraint(top: Constraint(t, constant: constant))
+        }
+        
+        if let l = left {
+            setLeftConstraint(left: Constraint(l, constant: constant))
+        }
+        
+        if let b = bottom {
+            setBottomConstraint(bottom: Constraint(b, constant: -constant))
+        }
+        
+        if let r = right {
+            setRightConstraint(right: Constraint(r, constant: -constant))
+        }
+    }
+    
+    func setConstraintsRelatively(top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil, constant: CGFloat = 0) {
+        if let t = top {
+            setTopConstraint(top: Constraint(t, constant: constant))
+        }
+        
+        if let l = left {
+            setLeftConstraint(left: Constraint(l, constant: constant))
+        }
+        
+        if let b = bottom {
+            setBottomConstraint(bottom: Constraint(b, constant: constant))
+        }
+        
+        if let r = right {
+            setRightConstraint(right: Constraint(r, constant: constant))
+        }
     }
     
     func setTopConstraint(top: Constraint) {
@@ -189,7 +243,7 @@ extension UIView {
     }
     
     /// 상대값
-    func setWidthConstraint(width: Constraint, isInequal: Int = 0) {
+    func setWidthConstraint(width: Constraint) {
         NSLayoutConstraint.activate([
             self.widthAnchor.constraint(equalTo: width.view!.widthAnchor, multiplier: width.dConstant)
         ])
