@@ -49,7 +49,8 @@ class MainType0Cell: UITableViewCell {
     
     @IBAction func buttonClick(_ sender: UIButton) {
         if type == .OpeningAccount {
-            delegate?.moveButtonClicked(isModal: true)
+//            delegate?.moveButtonClicked(isModal: true)
+            delegate?.moveToAddAccounts()
         }else { // 화면 편집 모달
             delegate?.moveButtonClicked(isModal: false)
         }

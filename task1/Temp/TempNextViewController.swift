@@ -11,12 +11,17 @@ class TempNextViewController: UIViewController {
 
     var isModal: Bool = true
     @IBOutlet weak var closeBtn: UIButton!
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    var text: String = "Welcome"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if !isModal {
             tabBarController?.tabBar.isHidden = true
         }
+        
+        resultLabel.text = text
     }
     
     @IBAction func cloaseBtnClick(_ sender: UIButton) {

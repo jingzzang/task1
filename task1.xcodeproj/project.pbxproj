@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F02D39E2A190BCB009B0EB6 /* AddAccountModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F02D39D2A190BCB009B0EB6 /* AddAccountModalView.xib */; };
+		3F02D3A02A190BDD009B0EB6 /* AddAccountModalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F02D39F2A190BDD009B0EB6 /* AddAccountModalCell.xib */; };
+		3F02D3A22A190C0C009B0EB6 /* AddAccountModalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F02D3A12A190C0C009B0EB6 /* AddAccountModalCell.swift */; };
+		3F02D3A42A190D66009B0EB6 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F02D3A32A190D66009B0EB6 /* next.png */; };
+		3F02D3A62A191680009B0EB6 /* AddAccountModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F02D3A52A191680009B0EB6 /* AddAccountModalViewController.swift */; };
+		3F02D3A92A191881009B0EB6 /* AdsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F02D3A82A191881009B0EB6 /* AdsCell.xib */; };
+		3F02D3AD2A191A8C009B0EB6 /* AdsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F02D3AC2A191A8C009B0EB6 /* AdsCell.swift */; };
+		3F02D3AF2A191E6A009B0EB6 /* AdsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F02D3AE2A191E6A009B0EB6 /* AdsInfo.swift */; };
 		3F1E2AE32A150259004389D4 /* ToastVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E2AE22A150259004389D4 /* ToastVIew.swift */; };
 		3F1E2AE72A1504C7004389D4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E2AE62A1504C7004389D4 /* Notification.swift */; };
 		3F1E2AF12A152796004389D4 /* toastClose.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1E2AF02A152796004389D4 /* toastClose.png */; };
@@ -65,6 +73,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F02D39D2A190BCB009B0EB6 /* AddAccountModalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAccountModalView.xib; sourceTree = "<group>"; };
+		3F02D39F2A190BDD009B0EB6 /* AddAccountModalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAccountModalCell.xib; sourceTree = "<group>"; };
+		3F02D3A12A190C0C009B0EB6 /* AddAccountModalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountModalCell.swift; sourceTree = "<group>"; };
+		3F02D3A32A190D66009B0EB6 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		3F02D3A52A191680009B0EB6 /* AddAccountModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountModalViewController.swift; sourceTree = "<group>"; };
+		3F02D3A82A191881009B0EB6 /* AdsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsCell.xib; sourceTree = "<group>"; };
+		3F02D3AC2A191A8C009B0EB6 /* AdsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsCell.swift; sourceTree = "<group>"; };
+		3F02D3AE2A191E6A009B0EB6 /* AdsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsInfo.swift; sourceTree = "<group>"; };
 		3F1E2AE22A150259004389D4 /* ToastVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastVIew.swift; sourceTree = "<group>"; };
 		3F1E2AE62A1504C7004389D4 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		3F1E2AF02A152796004389D4 /* toastClose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toastClose.png; sourceTree = "<group>"; };
@@ -135,6 +151,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F02D39C2A190BB0009B0EB6 /* AddAccountModal */ = {
+			isa = PBXGroup;
+			children = (
+				3F02D39D2A190BCB009B0EB6 /* AddAccountModalView.xib */,
+				3F02D39F2A190BDD009B0EB6 /* AddAccountModalCell.xib */,
+				3F02D3A12A190C0C009B0EB6 /* AddAccountModalCell.swift */,
+			);
+			path = AddAccountModal;
+			sourceTree = "<group>";
+		};
+		3F02D3A72A191872009B0EB6 /* AdsInTable */ = {
+			isa = PBXGroup;
+			children = (
+				3F02D3A82A191881009B0EB6 /* AdsCell.xib */,
+				3F02D3AC2A191A8C009B0EB6 /* AdsCell.swift */,
+			);
+			path = AdsInTable;
+			sourceTree = "<group>";
+		};
 		3F380BD52A11F6F00028FEB1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +193,8 @@
 		3F8772012A105F5400180BED /* MainGroup */ = {
 			isa = PBXGroup;
 			children = (
+				3F02D3A72A191872009B0EB6 /* AdsInTable */,
+				3F02D39C2A190BB0009B0EB6 /* AddAccountModal */,
 				505019712A0A8BEF00C08A38 /* Main.xib */,
 				507589332A0BE660007FD385 /* MainViewTable */,
 				3F93F83A2A0F07AE00774277 /* AdsModal.xib */,
@@ -176,6 +213,7 @@
 				3F93F83C2A0F07DD00774277 /* AdsModalViewController.swift */,
 				3F8772092A10666E00180BED /* AccountNameEditingViewController.swift */,
 				3F87720B2A10668900180BED /* AccountOptionViewController.swift */,
+				3F02D3A52A191680009B0EB6 /* AddAccountModalViewController.swift */,
 			);
 			path = MainGroup;
 			sourceTree = "<group>";
@@ -192,6 +230,7 @@
 		5037E7302A09219500257514 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				3F02D3A32A190D66009B0EB6 /* next.png */,
 				3F1E2AF02A152796004389D4 /* toastClose.png */,
 				3F82C6052A13D11C003AE05B /* colorCheck.png */,
 				3F8772072A1061C500180BED /* close.png */,
@@ -240,6 +279,7 @@
 			children = (
 				3F380BD12A11E9AC0028FEB1 /* DataManager.swift */,
 				507589362A0BE8C2007FD385 /* AccountInfo.swift */,
+				3F02D3AE2A191E6A009B0EB6 /* AdsInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -365,6 +405,7 @@
 				505019872A0B00FB00C08A38 /* Settings.xib in Resources */,
 				5037E7342A09223600257514 /* intro.jpg in Resources */,
 				3F8772062A10604400180BED /* AccountNameEditingView.xib in Resources */,
+				3F02D3A02A190BDD009B0EB6 /* AddAccountModalCell.xib in Resources */,
 				5037E73B2A09CFE500257514 /* profile.png in Resources */,
 				507589682A0D233A007FD385 /* character.png in Resources */,
 				3F82C5FE2A13BE9E003AE05B /* ColorCell.xib in Resources */,
@@ -375,14 +416,17 @@
 				505019742A0A8D7A00C08A38 /* Default.storyboard in Resources */,
 				5050197E2A0AFDEB00C08A38 /* History.xib in Resources */,
 				507589522A0C515E007FD385 /* MainType1Cell.xib in Resources */,
+				3F02D3A42A190D66009B0EB6 /* next.png in Resources */,
 				5075895C2A0D0E93007FD385 /* MainType3Cell.xib in Resources */,
 				507589622A0D1335007FD385 /* more.png in Resources */,
 				3F82C6062A13D11C003AE05B /* colorCheck.png in Resources */,
+				3F02D3A92A191881009B0EB6 /* AdsCell.xib in Resources */,
 				507589642A0D17B6007FD385 /* logo.png in Resources */,
 				507589502A0C514C007FD385 /* MainType0Cell.xib in Resources */,
 				3F44CE6E2A11DC9600D20F91 /* TempNextViewController.xib in Resources */,
 				3F8772082A1061C500180BED /* close.png in Resources */,
 				5075896A2A0D2EED007FD385 /* product.png in Resources */,
+				3F02D39E2A190BCB009B0EB6 /* AddAccountModalView.xib in Resources */,
 				507589662A0D19BE007FD385 /* friends.png in Resources */,
 				3F8772042A105F9E00180BED /* AccountOptionView.xib in Resources */,
 				505D571A2A09156C0047CE1B /* Assets.xcassets in Resources */,
@@ -402,14 +446,18 @@
 				505019702A0A858100C08A38 /* TabViewController.swift in Sources */,
 				505D57152A09156B0047CE1B /* MainViewController.swift in Sources */,
 				3F93F83D2A0F07DD00774277 /* AdsModalViewController.swift in Sources */,
+				3F02D3A62A191680009B0EB6 /* AddAccountModalViewController.swift in Sources */,
 				3F50FA022A16D939007288E8 /* Constraints.swift in Sources */,
 				3F380BD42A11F3E10028FEB1 /* UIColorExtension.swift in Sources */,
 				3F44CE6D2A11DC9600D20F91 /* TempNextViewController.swift in Sources */,
 				507589542A0C5171007FD385 /* MainType0Cell.swift in Sources */,
 				507589562A0C5182007FD385 /* MainType1Cell.swift in Sources */,
+				3F02D3AD2A191A8C009B0EB6 /* AdsCell.swift in Sources */,
 				5050198E2A0BB21B00C08A38 /* DeviceUtil.swift in Sources */,
 				3F87720A2A10666E00180BED /* AccountNameEditingViewController.swift in Sources */,
+				3F02D3A22A190C0C009B0EB6 /* AddAccountModalCell.swift in Sources */,
 				5075895A2A0D0E88007FD385 /* MainType2Cell.swift in Sources */,
+				3F02D3AF2A191E6A009B0EB6 /* AdsInfo.swift in Sources */,
 				505019902A0BB44300C08A38 /* Data.swift in Sources */,
 				3F1E2AE72A1504C7004389D4 /* Notification.swift in Sources */,
 				505019842A0AFEC300C08A38 /* CommonUitl.swift in Sources */,

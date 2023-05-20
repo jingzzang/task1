@@ -118,7 +118,7 @@ extension MainViewController {
 // UITableViewDelegate
 extension MainViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+//        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -167,5 +167,10 @@ extension MainViewController: MainTypeCellDelegate {
                                 //nothing
                             })
         }
+    }
+    
+    func moveToAddAccounts() {
+        let vc = AddAccountModalViewController(nibName: "AddAccountModalView", bundle: nil)
+        present(vc, animated: true)
     }
 }

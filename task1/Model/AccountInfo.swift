@@ -12,6 +12,7 @@ enum CellType {
     case Deposit
     case Party
     case Saving
+    case Extra
 }
 
 /*
@@ -41,3 +42,8 @@ struct AccountInfo {
     var safeboxYn: Bool?            // 세이프박스 여부
 }
 
+struct ProductInfo {
+    var type: CellType
+    var typeName: String
+    var exp: String
+}

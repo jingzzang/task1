@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddAccountModalCell" customModule="task1" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddAccountModalCell" customModule="task1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ak6-Tn-NOE" userLabel="background">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzh-FP-ZYl">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="mzh-FP-ZYl" firstAttribute="leading" secondItem="ak6-Tn-NOE" secondAttribute="leading" id="BfU-W5-UNU"/>
+                        <constraint firstAttribute="trailing" secondItem="mzh-FP-ZYl" secondAttribute="trailing" id="hbW-ag-dbm"/>
+                        <constraint firstItem="mzh-FP-ZYl" firstAttribute="top" secondItem="ak6-Tn-NOE" secondAttribute="top" id="p39-3W-k5E"/>
+                        <constraint firstAttribute="height" constant="80" id="u86-uO-zgK"/>
+                        <constraint firstAttribute="bottom" secondItem="mzh-FP-ZYl" secondAttribute="bottom" id="yM8-y9-xqz"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0Fz-GA-M5g" userLabel="labels">
+                    <rect key="frame" x="30" y="20" width="142" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="까다로운 계좌개설도 손쉽게" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7w-Wz-3tb">
+                            <rect key="frame" x="0.0" y="0.0" width="142" height="15.666666666666666"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <color key="textColor" systemColor="systemGrayColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="입출금통장" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMv-UH-mmi">
+                            <rect key="frame" x="0.0" y="20.666666666666664" width="69.333333333333329" height="19.333333333333336"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qxv-eP-VeC">
+                    <rect key="frame" x="328" y="31.666666666666671" width="17" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Qxv-eP-VeC" secondAttribute="height" multiplier="1:1" id="HtY-i4-jrV"/>
+                        <constraint firstAttribute="width" constant="17" id="qoU-IL-9Uq"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ju-T7-hH1">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="btnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="4jd-5i-eAB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <accessibility key="accessibilityConfiguration" identifier="AddAccountModalCell"/>
+            <constraints>
+                <constraint firstItem="0Fz-GA-M5g" firstAttribute="leading" secondItem="ak6-Tn-NOE" secondAttribute="leading" constant="30" id="5Hl-ck-iPv"/>
+                <constraint firstAttribute="trailing" secondItem="Qxv-eP-VeC" secondAttribute="trailing" constant="30" id="9xG-O5-hyi"/>
+                <constraint firstAttribute="trailing" secondItem="ak6-Tn-NOE" secondAttribute="trailing" id="Bwn-ru-OCi"/>
+                <constraint firstAttribute="bottom" secondItem="ak6-Tn-NOE" secondAttribute="bottom" id="KUl-85-Mni"/>
+                <constraint firstItem="ak6-Tn-NOE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="P7T-M3-u9Y"/>
+                <constraint firstAttribute="trailing" secondItem="5ju-T7-hH1" secondAttribute="trailing" id="SHJ-ti-jYV"/>
+                <constraint firstItem="5ju-T7-hH1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XoS-1Q-q8s"/>
+                <constraint firstItem="0Fz-GA-M5g" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Zgf-AW-REA"/>
+                <constraint firstItem="5ju-T7-hH1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="c14-r7-CPI"/>
+                <constraint firstItem="Qxv-eP-VeC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="hgM-eQ-8p3"/>
+                <constraint firstAttribute="bottom" secondItem="5ju-T7-hH1" secondAttribute="bottom" id="rlt-Zm-s9I"/>
+                <constraint firstItem="ak6-Tn-NOE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wjB-t1-opO"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="acctTypeLabel" destination="tMv-UH-mmi" id="1PX-TG-PFa"/>
+                <outlet property="expLabel" destination="h7w-Wz-3tb" id="uyb-er-Q06"/>
+            </connections>
+            <point key="canvasLocation" x="55.725190839694655" y="31.690140845070424"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="next.png" width="81.818183898925781" height="81.818183898925781"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
