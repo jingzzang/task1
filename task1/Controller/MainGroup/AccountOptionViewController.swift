@@ -83,7 +83,7 @@ class AccountOptionViewController: UIViewController {
         }
         DataManager.updateAcctInfoData(data: data!)
         self.dismiss(animated: true){
-            NotificationCenter.default.post(name: NSNotification.Name("showMain"), object: true)
+            NotificationCenter.default.post(name: NSNotification.Name("showMain"), object: nil)
         }
     }
     
@@ -139,7 +139,6 @@ extension AccountOptionViewController: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("call didSelectItemAt")
         let deSelectedIndexPath = selectedIndexPath
         selectedIndexPath = indexPath
         collectionView.reloadItems(at: [deSelectedIndexPath!, indexPath])

@@ -61,8 +61,8 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @objc func showMain(_ notification: Notification) {
+        contentView.reloadData()
         if let needReload = notification.object as? Bool, needReload {
-            contentView.reloadData()
         }else {
             checkClipboard()
         }

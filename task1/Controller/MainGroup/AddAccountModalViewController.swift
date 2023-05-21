@@ -47,7 +47,6 @@ extension AddAccountModalViewController {
 
 extension AddAccountModalViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("call didSelectRowAt")
     }
 }
 

@@ -48,7 +48,6 @@ class EditAccountModalViewController: UIViewController {
     }
     
     @IBAction func showAmountToggleClicked(_ sender: UISwitch) {
-        print("call showAmountToggleClicked")
         isChanged = true
     }
 }

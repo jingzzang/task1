@@ -33,6 +33,7 @@ class DataManager {
         if let idx = acctInfoData.firstIndex(where: { $0.accountNum == data.accountNum }) {
             acctInfoData[idx] = data
         }
+        visibleAcctData = acctInfoData.filter{ $0.isVisible }
     }
     
     static func openAccount(type: CellType, amount: Int) {
