@@ -87,11 +87,16 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
 
 // UITableViewDataSource
 extension MainViewController {
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataManager.visibleAcctData.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let isMaskHidden = !UserDefaults.standard.bool(forKey: "isHiddenAmount")
         if indexPath.row >= DataManager.visibleAcctData.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EtcMainCell", for: indexPath) as! EtcMainCell
             cell.configure(isPlus: indexPath.row == DataManager.acctInfoData.count)
@@ -102,7 +107,7 @@ extension MainViewController {
             let type = data.type
             if type == .Deposit {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MainType1Cell", for: indexPath) as! MainType1Cell
-                cell.configure(data: data)
+                cell.configure(data: data, isMaskHidden: isMaskHidden)
                 cell.delegate = self
                 return cell
             }else if type == .Party {

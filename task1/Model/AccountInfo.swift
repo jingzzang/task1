@@ -41,6 +41,7 @@ struct AccountInfo {
     var moneyboxYn: Bool?           // 저금통 여부
     var safeboxYn: Bool?            // 세이프박스 여부
     var isVisible: Bool = true      // 메인노출 여부
+    var isPrimary: Bool = true      // (입출금 통장 중) 메인계좌 여부
 }
 
 struct ProductInfo {

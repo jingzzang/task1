@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        if UserDefaults.standard.string(forKey: "isHiddenAmount") == nil {
+            UserDefaults.standard.set(false, forKey: "isHiddenAmount")
+        }
+
         return true
     }
 

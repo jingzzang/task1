@@ -8,13 +8,19 @@
 import UIKit
 
 extension UIView {
-    func showToast(msg: String) {
+    func showToast(msg: String, duration: CGFloat = 1.0, bottomConstant: CGFloat? = nil) {
         let toast = ToastView(msg: msg)
         self.addSubview(toast)
         
         toast.translatesAutoresizingMaskIntoConstraints = false
         
-        toast.setConstraintsCentrally(self)
+        if let constant = bottomConstant {
+            toast.setConstraintsCentrallyX(self)
+            toast.setBottomConstraint(bottom: Constraint(self.bottomAnchor, constant: constant))
+        }else {
+            toast.setConstraintsCentrally(self)
+        }
+        
         toast.setWidthConstraint(width: 250, .less)
         
         /*
@@ -23,7 +29,7 @@ extension UIView {
          * animations : 애니메이션 동작
          * completion : 애니메이션 Closure
          */
-        UIView.animate(withDuration: 0.3, delay: 1.0, options: .curveEaseInOut,
+        UIView.animate(withDuration: 0.3, delay: duration, options: .curveEaseInOut,
                        animations: {
                             toast.alpha = 0.0
                         }, completion:{ _ in

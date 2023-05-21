@@ -33,26 +33,6 @@
                         <constraint firstAttribute="width" secondItem="W7O-VW-Sl5" secondAttribute="height" multiplier="1:1" id="fdo-fQ-yvl"/>
                     </constraints>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="top" spacing="5" id="ZbO-iF-A5J" userLabel="Info">
-                    <rect key="frame" x="86" y="35" width="80.666666666666686" height="41.333333333333343"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="입출금" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6cx-DE-1Vb" userLabel="account name">
-                            <rect key="frame" x="0.0" y="0.0" width="36.333333333333336" height="17"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="135,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sHy-AL-Uwt" userLabel="amount">
-                            <rect key="frame" x="0.0" y="22" width="78.333333333333329" height="19.333333333333329"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="za6-wO-at1" userLabel="addtional buttons">
                     <rect key="frame" x="249" y="78" width="109" height="27"/>
                     <subviews>
@@ -190,6 +170,52 @@
                         <action selector="moreBtnClick:" destination="aWj-5k-g3o" eventType="touchUpInside" id="j93-Qe-bMt"/>
                     </connections>
                 </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="7AE-xO-dFW">
+                    <rect key="frame" x="86" y="35" width="343" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AcctName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtv-Dq-lZh">
+                            <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9OF-re-AoS" userLabel="AmountView">
+                            <rect key="frame" x="0.0" y="20.333333333333336" width="343" height="29.666666666666664"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrN-q2-VCQ">
+                                    <rect key="frame" x="0.0" y="4.6666666666666643" width="60" height="20.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlG-xC-vst" userLabel="AmountMask">
+                                    <rect key="frame" x="0.0" y="-2" width="313" height="34"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="금액보기">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="pressMask:" destination="aWj-5k-g3o" eventType="touchDown" id="hPh-7E-pCl"/>
+                                        <action selector="unpressMask:" destination="aWj-5k-g3o" eventType="touchUpInside" id="3bP-9P-Jzu"/>
+                                        <action selector="unpressMaskOutside:" destination="aWj-5k-g3o" eventType="touchUpOutside" id="wdd-XC-xDj"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="WlG-xC-vst" secondAttribute="trailing" constant="30" id="0mf-fK-UZB"/>
+                                <constraint firstItem="WlG-xC-vst" firstAttribute="centerY" secondItem="9OF-re-AoS" secondAttribute="centerY" id="HAo-2x-VUN"/>
+                                <constraint firstItem="WlG-xC-vst" firstAttribute="leading" secondItem="9OF-re-AoS" secondAttribute="leading" id="IAf-HX-OfZ"/>
+                                <constraint firstItem="hrN-q2-VCQ" firstAttribute="leading" secondItem="9OF-re-AoS" secondAttribute="leading" id="jSM-3X-kBk"/>
+                                <constraint firstItem="hrN-q2-VCQ" firstAttribute="centerY" secondItem="9OF-re-AoS" secondAttribute="centerY" id="qz1-VG-ztt"/>
+                                <constraint firstItem="WlG-xC-vst" firstAttribute="leading" secondItem="9OF-re-AoS" secondAttribute="leading" id="xv1-uP-mdO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="2C0-Ec-ZZU"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <accessibility key="accessibilityConfiguration" identifier="MainType1Cell"/>
@@ -198,6 +224,7 @@
                 <constraint firstItem="d4A-z1-xOt" firstAttribute="trailing" secondItem="nI2-UE-yp8" secondAttribute="trailing" constant="15" id="82C-Rs-7ye"/>
                 <constraint firstItem="1p1-4d-9OC" firstAttribute="leading" secondItem="d4A-z1-xOt" secondAttribute="leading" constant="5" id="9wK-w3-8CS"/>
                 <constraint firstItem="nI2-UE-yp8" firstAttribute="top" secondItem="d4A-z1-xOt" secondAttribute="top" constant="10" id="D46-fS-Oap"/>
+                <constraint firstItem="7AE-xO-dFW" firstAttribute="leading" secondItem="W7O-VW-Sl5" secondAttribute="trailing" constant="10" id="HPA-eP-Pnw"/>
                 <constraint firstItem="yEi-Uj-C83" firstAttribute="top" secondItem="1p1-4d-9OC" secondAttribute="top" id="HUE-U7-ztS"/>
                 <constraint firstItem="1p1-4d-9OC" firstAttribute="trailing" secondItem="yEi-Uj-C83" secondAttribute="trailing" id="J0r-T6-pDO"/>
                 <constraint firstItem="d4A-z1-xOt" firstAttribute="trailing" secondItem="za6-wO-at1" secondAttribute="trailing" constant="15" id="MNz-RW-bYs"/>
@@ -206,14 +233,14 @@
                 <constraint firstItem="d4A-z1-xOt" firstAttribute="trailing" secondItem="IVb-Gp-YzX" secondAttribute="trailing" constant="5" id="OsG-rJ-EQT"/>
                 <constraint firstAttribute="trailing" secondItem="d4A-z1-xOt" secondAttribute="trailing" constant="20" id="Q98-g5-kXQ"/>
                 <constraint firstItem="d4A-z1-xOt" firstAttribute="trailing" secondItem="XYb-6C-piH" secondAttribute="trailing" constant="25" id="S6M-la-Zs6"/>
-                <constraint firstItem="ZbO-iF-A5J" firstAttribute="leading" secondItem="W7O-VW-Sl5" secondAttribute="trailing" constant="10" id="WAy-Ts-Ch2"/>
                 <constraint firstItem="1p1-4d-9OC" firstAttribute="bottom" secondItem="yEi-Uj-C83" secondAttribute="bottom" id="YD2-91-RbU"/>
                 <constraint firstItem="yEi-Uj-C83" firstAttribute="bottom" secondItem="za6-wO-at1" secondAttribute="bottom" constant="20" id="aEj-9S-Pi1"/>
+                <constraint firstItem="W7O-VW-Sl5" firstAttribute="leading" secondItem="d4A-z1-xOt" secondAttribute="leading" constant="20" id="czD-WN-erb"/>
                 <constraint firstItem="d4A-z1-xOt" firstAttribute="trailing" secondItem="1p1-4d-9OC" secondAttribute="trailing" constant="5" id="dYI-DQ-kM7"/>
                 <constraint firstItem="d4A-z1-xOt" firstAttribute="top" secondItem="aWj-5k-g3o" secondAttribute="top" constant="5" id="dYO-3P-bmz"/>
                 <constraint firstItem="d4A-z1-xOt" firstAttribute="bottom" secondItem="IVb-Gp-YzX" secondAttribute="bottom" constant="10" id="efk-dP-f7D"/>
+                <constraint firstItem="7AE-xO-dFW" firstAttribute="top" secondItem="aWj-5k-g3o" secondAttribute="top" constant="35" id="eqD-J7-9TL"/>
                 <constraint firstItem="W7O-VW-Sl5" firstAttribute="top" secondItem="aWj-5k-g3o" secondAttribute="top" constant="40" id="hN4-wc-s4U"/>
-                <constraint firstItem="ZbO-iF-A5J" firstAttribute="top" secondItem="aWj-5k-g3o" secondAttribute="top" constant="35" id="iWE-dw-Alc"/>
                 <constraint firstItem="IVb-Gp-YzX" firstAttribute="top" secondItem="XYb-6C-piH" secondAttribute="bottom" constant="5" id="l8L-g4-akm"/>
                 <constraint firstItem="IVb-Gp-YzX" firstAttribute="leading" secondItem="d4A-z1-xOt" secondAttribute="leading" constant="5" id="pTA-So-HPv"/>
                 <constraint firstItem="1p1-4d-9OC" firstAttribute="top" secondItem="d4A-z1-xOt" secondAttribute="top" constant="5" id="sjE-cF-7Sl"/>
@@ -222,8 +249,9 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="acctName" destination="6cx-DE-1Vb" id="IeD-hH-dVt"/>
-                <outlet property="amount" destination="sHy-AL-Uwt" id="ZNp-k2-5ob"/>
+                <outlet property="acctName" destination="gtv-Dq-lZh" id="j22-bS-6MQ"/>
+                <outlet property="amount" destination="hrN-q2-VCQ" id="oUd-Kc-QaT"/>
+                <outlet property="amountMask" destination="WlG-xC-vst" id="l03-KM-FSE"/>
                 <outlet property="background" destination="d4A-z1-xOt" id="hnQ-zQ-iLo"/>
             </connections>
             <point key="canvasLocation" x="64.885496183206101" y="20.422535211267608"/>
