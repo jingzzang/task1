@@ -4,50 +4,52 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainType0Cell" customModule="task1" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EtcMainCell" customModule="task1" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Klx-lN-Q19" userLabel="Type0" customClass="MainType0Cell" customModule="task1" customModuleProvider="target">
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yti-SM-GCb" userLabel="EtcCell" customClass="EtcMainCell" customModule="task1" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vfy-Kn-iJ5" userLabel="background">
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sO4-g5-S2i" userLabel="background">
                     <rect key="frame" x="20" y="5" width="353" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemTealColor"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bch-73-4zH">
+                <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tp2-bk-A9S">
                     <rect key="frame" x="20" y="5" width="353" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="+">
-                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="buttonClick:" destination="Klx-lN-Q19" eventType="touchUpInside" id="1hP-Qw-BnG"/>
+                        <action selector="buttonClick:" destination="Yti-SM-GCb" eventType="touchUpInside" id="3ys-ZE-iGp"/>
                     </connections>
                 </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="ZOm-Uv-BeF"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <accessibility key="accessibilityConfiguration" identifier="MainType0Cell"/>
+            <accessibility key="accessibilityConfiguration" identifier="EtcMainCell"/>
             <constraints>
-                <constraint firstItem="Vfy-Kn-iJ5" firstAttribute="top" secondItem="Klx-lN-Q19" secondAttribute="top" constant="5" id="9BU-mj-3ZY"/>
-                <constraint firstAttribute="bottom" secondItem="Bch-73-4zH" secondAttribute="bottom" constant="5" id="Dja-YC-jZe"/>
-                <constraint firstItem="Vfy-Kn-iJ5" firstAttribute="leading" secondItem="Klx-lN-Q19" secondAttribute="leading" constant="20" id="awI-3Y-ClK"/>
-                <constraint firstItem="Bch-73-4zH" firstAttribute="leading" secondItem="Klx-lN-Q19" secondAttribute="leading" constant="20" id="eam-KU-XG4"/>
-                <constraint firstItem="Bch-73-4zH" firstAttribute="top" secondItem="Klx-lN-Q19" secondAttribute="top" constant="5" id="hRu-bx-o7D"/>
-                <constraint firstAttribute="trailing" secondItem="Bch-73-4zH" secondAttribute="trailing" constant="20" id="kjV-IT-Mk0"/>
-                <constraint firstAttribute="bottom" secondItem="Vfy-Kn-iJ5" secondAttribute="bottom" constant="5" id="qkD-aq-HOr"/>
-                <constraint firstAttribute="trailing" secondItem="Vfy-Kn-iJ5" secondAttribute="trailing" constant="20" id="rKV-fD-ZHk"/>
+                <constraint firstItem="sO4-g5-S2i" firstAttribute="top" secondItem="Yti-SM-GCb" secondAttribute="top" constant="5" id="1Hd-91-dfO"/>
+                <constraint firstAttribute="bottom" secondItem="Tp2-bk-A9S" secondAttribute="bottom" constant="5" id="AFS-Lw-ipT"/>
+                <constraint firstAttribute="trailing" secondItem="sO4-g5-S2i" secondAttribute="trailing" constant="20" id="Byd-6j-xfy"/>
+                <constraint firstItem="Tp2-bk-A9S" firstAttribute="top" secondItem="Yti-SM-GCb" secondAttribute="top" constant="5" id="XD2-Km-k36"/>
+                <constraint firstAttribute="bottom" secondItem="sO4-g5-S2i" secondAttribute="bottom" constant="5" id="gGo-RO-fzW"/>
+                <constraint firstAttribute="trailing" secondItem="Tp2-bk-A9S" secondAttribute="trailing" constant="20" id="q10-PH-P4w"/>
+                <constraint firstItem="sO4-g5-S2i" firstAttribute="leading" secondItem="Yti-SM-GCb" secondAttribute="leading" constant="20" id="rJt-gk-Cle"/>
+                <constraint firstItem="Tp2-bk-A9S" firstAttribute="leading" secondItem="Yti-SM-GCb" secondAttribute="leading" constant="20" id="stz-VM-dDJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="background" destination="Vfy-Kn-iJ5" id="nVl-gZ-rwP"/>
-                <outlet property="button" destination="Bch-73-4zH" id="Y31-JJ-Xdu"/>
+                <outlet property="background" destination="sO4-g5-S2i" id="4xF-Tu-JGd"/>
+                <outlet property="button" destination="Tp2-bk-A9S" id="opL-CJ-Zob"/>
             </connections>
             <point key="canvasLocation" x="64.885496183206101" y="20.422535211267608"/>
         </view>

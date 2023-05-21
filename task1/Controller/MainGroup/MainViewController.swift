@@ -15,7 +15,7 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var clipboardView: UIView!
     @IBOutlet weak var clipboardStringLabel: UILabel!
     
-    let cellTypes = ["MainType0Cell", "MainType1Cell", "MainType2Cell", "MainType3Cell"]
+    let cellTypes = ["MainType1Cell", "MainType2Cell", "MainType3Cell"]
     
     let pasteboard = UIPasteboard.general
     
@@ -23,9 +23,12 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         contentView.translatesAutoresizingMaskIntoConstraints = false
         contentView.contentInset = UIEdgeInsets(top: 80, left: 0, bottom: (tabBarController?.tabBar.frame.size.height ?? 0)+100, right: 0)
+        
+        contentView.register(UINib(nibName: "EtcMainCell", bundle: nil), forCellReuseIdentifier: "EtcMainCell")
         cellTypes.forEach { type in
             contentView.register(UINib(nibName: type, bundle: nil), forCellReuseIdentifier: type)
         }
+        
         contentBaseView.addSubview(contentView)
         contentView.separatorStyle = .none // 셀 사이 구분선 스타일
         
@@ -85,32 +88,34 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
 // UITableViewDataSource
 extension MainViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataManager.acctInfoData.count
+        return DataManager.acctInfoData.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = DataManager.acctInfoData[indexPath.row]
-        let type = data.type
-        if type == .Default {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MainType0Cell", for: indexPath) as! MainType0Cell
-            cell.configure(data: data)
-            cell.delegate = self
-            return cell
-        }else if type == .Deposit {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MainType1Cell", for: indexPath) as! MainType1Cell
-            cell.configure(data: data)
-            cell.delegate = self
-            return cell
-        }else if type == .Party {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MainType2Cell", for: indexPath) as! MainType2Cell
-            cell.configure(data: data)
+        if indexPath.row >= DataManager.acctInfoData.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "EtcMainCell", for: indexPath) as! EtcMainCell
+            cell.configure(isPlus: indexPath.row == DataManager.acctInfoData.count)
             cell.delegate = self
             return cell
         }else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MainType3Cell", for: indexPath) as! MainType3Cell
-            cell.configure(data: data)
-            cell.delegate = self
-            return cell
+            let data = DataManager.acctInfoData[indexPath.row]
+            let type = data.type
+            if type == .Deposit {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "MainType1Cell", for: indexPath) as! MainType1Cell
+                cell.configure(data: data)
+                cell.delegate = self
+                return cell
+            }else if type == .Party {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "MainType2Cell", for: indexPath) as! MainType2Cell
+                cell.configure(data: data)
+                cell.delegate = self
+                return cell
+            }else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "MainType3Cell", for: indexPath) as! MainType3Cell
+                cell.configure(data: data)
+                cell.delegate = self
+                return cell
+            }
         }
     }
 }
@@ -168,9 +173,17 @@ extension MainViewController: MainTypeCellDelegate {
                             })
         }
     }
-    
-    func moveToAddAccounts() {
+}
+
+// mark : 테이블 뷰 셀(기타) Delegate
+
+extension MainViewController: EtcMainCellDelegate {
+    func openAddAccountModal() {
         let vc = AddAccountModalViewController(nibName: "AddAccountModalView", bundle: nil)
         present(vc, animated: true)
+    }
+    
+    func openEditAccountModal() {
+        print("openEditAccountModal")
     }
 }

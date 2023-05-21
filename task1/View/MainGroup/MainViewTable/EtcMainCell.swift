@@ -1,59 +1,60 @@
 //
-//  MainType0Cell.swift
+//  EtcMainCell.swift
 //  task1
 //
-//  Created by 이지은 on 2023/05/11.
+//  Created by 징 on 2023/05/21.
 //
 
 import UIKit
 
-class MainType0Cell: UITableViewCell {
-    var delegate: MainTypeCellDelegate?
+class EtcMainCell: UITableViewCell {
+    var delegate: EtcMainCellDelegate?
     
-    @IBOutlet var background: UIView!
+    @IBOutlet weak var background: UIView!
     @IBOutlet weak var button: UIButton!
-    
-    var type: ButtonType = .OpeningAccount
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
         background.layer.cornerRadius = 20
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
+        // Configure the view for the selected state
     }
 
-    // mark : cell 데이터 세팅
-    
-    func configure(data: AccountInfo) {
-        type = data.btnType ?? .OpeningAccount
-        background.backgroundColor = data.backgroundColor
-        
-        if type == .OpeningAccount {
+    func configure(isPlus: Bool) {
+        if isPlus {
             let buttonTitle = "+"
             let boldFont = UIFont.boldSystemFont(ofSize: 17)
-
+            background.backgroundColor = .lightGrey
+            
             button.titleLabel?.font = boldFont
             button.setTitle(buttonTitle, for: .normal)
+            button.tag = 1
         }else {
             let buttonTitle = "화면 편집"
             let font = UIFont.systemFont(ofSize: 15)
+            background.backgroundColor = .clear
             
             button.titleLabel?.font = font
             button.setTitleColor(.grey, for: .normal)
             button.setTitle(buttonTitle, for: .normal)
+            button.tag = -1
         }
     }
     
     @IBAction func buttonClick(_ sender: UIButton) {
-        if type == .OpeningAccount {
-//            delegate?.moveButtonClicked(isModal: true)
-            delegate?.moveToAddAccounts()
-        }else { // 화면 편집 모달
-            delegate?.moveButtonClicked(isModal: false)
+        if sender.tag > 0 {
+            delegate?.openAddAccountModal()
+        }else {
+            delegate?.openEditAccountModal()
         }
     }
-    
+}
+
+protocol EtcMainCellDelegate {
+    func openAddAccountModal()
+    func openEditAccountModal()
 }

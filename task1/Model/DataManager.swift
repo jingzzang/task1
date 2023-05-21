@@ -23,10 +23,12 @@ class DataManager {
         AccountInfo(type: .Party, accountNum: "000-000-002", accountName: "🍄", amount: 612000, backgroundColor: .patternsBlue, image: UIImage(named: "friends")),
         AccountInfo(type: .Saving, accountNum: "000-000-003", accountName: "내 적금", amount: 350000, backgroundColor: .iceBerg, saveCount: 5),
         AccountInfo(type: .Saving, accountNum: "000-000-004", accountName: "예금", amount: 10000000, backgroundColor: .coralCandy, saveCount: -1),
-        AccountInfo(type: .Deposit, accountNum: "000-000-005", accountName: "비상금", amount: 145000, backgroundColor: .schooner),
-        AccountInfo(type: .Default, btnType: .OpeningAccount ,accountNum: "-", accountName: "-", amount: 0, backgroundColor: .lightGrey),
-        AccountInfo(type: .Default, btnType: .EditingView ,accountNum: "-", accountName: "-", amount: 0, backgroundColor: .white)
+        AccountInfo(type: .Deposit, accountNum: "000-000-005", accountName: "비상금", amount: 145000, backgroundColor: .schooner)
     ]
+    
+    static func getAcctData(isAll: Bool) -> [AccountInfo] {
+        return []
+    }
     
     static func updateAcctInfoData(data: AccountInfo) {
         if let idx = acctInfoData.firstIndex(where: { $0.accountNum == data.accountNum }) {

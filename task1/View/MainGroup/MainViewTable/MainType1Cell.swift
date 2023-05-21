@@ -65,7 +65,5 @@ protocol MainTypeCellDelegate: AnyObject {
     
     //temp function
     func moveButtonClicked(isModal: Bool)
-    
-    func moveToAddAccounts()
 }
 
