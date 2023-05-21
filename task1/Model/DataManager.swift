@@ -19,16 +19,15 @@ class DataManager {
     ]
     
     static var acctInfoData: [AccountInfo] = [
-        AccountInfo(type: .Deposit, accountNum: "000-000-001", accountName: "생활비", amount: 210000, backgroundColor: .echoBlue),
-        AccountInfo(type: .Party, accountNum: "000-000-002", accountName: "🍄", amount: 612000, backgroundColor: .patternsBlue, image: UIImage(named: "friends")),
-        AccountInfo(type: .Saving, accountNum: "000-000-003", accountName: "내 적금", amount: 350000, backgroundColor: .iceBerg, saveCount: 5),
-        AccountInfo(type: .Saving, accountNum: "000-000-004", accountName: "예금", amount: 10000000, backgroundColor: .coralCandy, saveCount: -1),
-        AccountInfo(type: .Deposit, accountNum: "000-000-005", accountName: "비상금", amount: 145000, backgroundColor: .schooner)
+        AccountInfo(type: .Deposit, accountNum: "000-000-001", accountName: "생활비", amount: 210000, backgroundColor: .echoBlue, isVisible: true),
+        AccountInfo(type: .Party, accountNum: "000-000-002", accountName: "🍄", amount: 612000, backgroundColor: .patternsBlue, image: UIImage(named: "friends"), isVisible: true),
+        AccountInfo(type: .Saving, accountNum: "000-000-003", accountName: "내 적금", amount: 350000, backgroundColor: .iceBerg, saveCount: 5, isVisible: true),
+        AccountInfo(type: .Saving, accountNum: "000-000-004", accountName: "예금", amount: 10000000, backgroundColor: .coralCandy, saveCount: -1, isVisible: true),
+        AccountInfo(type: .Deposit, accountNum: "000-000-005", accountName: "비상금", amount: 145000, backgroundColor: .schooner, isVisible: true)
     ]
     
-    static func getAcctData(isAll: Bool) -> [AccountInfo] {
-        return []
-    }
+    static var visibleAcctData = acctInfoData.filter{ $0.isVisible }
+    static var hiddenAcctData = acctInfoData.filter{ !$0.isVisible }
     
     static func updateAcctInfoData(data: AccountInfo) {
         if let idx = acctInfoData.firstIndex(where: { $0.accountNum == data.accountNum }) {
@@ -47,10 +46,9 @@ class DataManager {
                 }
             }
         }
-        let acctNum = acctInfoData.count - 1
         
-        let newData = AccountInfo(type: type, accountNum: String(acctNum).getNewAcctNum(), accountName: acctName, amount: amount, backgroundColor: CommonUtil().pickRandom())
-        acctInfoData.insert(newData, at: acctInfoData.count-2)
+        let newData = AccountInfo(type: type, accountNum: String(acctInfoData.count+1).getNewAcctNum(), accountName: acctName, amount: amount, backgroundColor: CommonUtil().pickRandom())
+        acctInfoData.append(newData)
     }
     
     static func closeAccount(data: AccountInfo) {

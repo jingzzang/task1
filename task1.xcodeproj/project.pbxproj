@@ -17,6 +17,9 @@
 		3F02D3AF2A191E6A009B0EB6 /* AdsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F02D3AE2A191E6A009B0EB6 /* AdsInfo.swift */; };
 		3F1D512A2A19B2D7004F1A2F /* EtcMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D51292A19B2D7004F1A2F /* EtcMainCell.xib */; };
 		3F1D512C2A19B2EA004F1A2F /* EtcMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D512B2A19B2EA004F1A2F /* EtcMainCell.swift */; };
+		3F1D51312A19B7ED004F1A2F /* EditAccountModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D51302A19B7ED004F1A2F /* EditAccountModalView.xib */; };
+		3F1D51342A19BBDC004F1A2F /* black_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1D51332A19BBDC004F1A2F /* black_close.png */; };
+		3F1D51392A19BD71004F1A2F /* EditAccountModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1D51382A19BD71004F1A2F /* EditAccountModalViewController.swift */; };
 		3F1E2AE32A150259004389D4 /* ToastVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E2AE22A150259004389D4 /* ToastVIew.swift */; };
 		3F1E2AE72A1504C7004389D4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E2AE62A1504C7004389D4 /* Notification.swift */; };
 		3F1E2AF12A152796004389D4 /* toastClose.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F1E2AF02A152796004389D4 /* toastClose.png */; };
@@ -83,6 +86,9 @@
 		3F02D3AE2A191E6A009B0EB6 /* AdsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsInfo.swift; sourceTree = "<group>"; };
 		3F1D51292A19B2D7004F1A2F /* EtcMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EtcMainCell.xib; sourceTree = "<group>"; };
 		3F1D512B2A19B2EA004F1A2F /* EtcMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcMainCell.swift; sourceTree = "<group>"; };
+		3F1D51302A19B7ED004F1A2F /* EditAccountModalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditAccountModalView.xib; sourceTree = "<group>"; };
+		3F1D51332A19BBDC004F1A2F /* black_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_close.png; sourceTree = "<group>"; };
+		3F1D51382A19BD71004F1A2F /* EditAccountModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountModalViewController.swift; sourceTree = "<group>"; };
 		3F1E2AE22A150259004389D4 /* ToastVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastVIew.swift; sourceTree = "<group>"; };
 		3F1E2AE62A1504C7004389D4 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		3F1E2AF02A152796004389D4 /* toastClose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toastClose.png; sourceTree = "<group>"; };
@@ -170,6 +176,14 @@
 			path = AdsInTable;
 			sourceTree = "<group>";
 		};
+		3F1D512D2A19B7A5004F1A2F /* EditAccountModal */ = {
+			isa = PBXGroup;
+			children = (
+				3F1D51302A19B7ED004F1A2F /* EditAccountModalView.xib */,
+			);
+			path = EditAccountModal;
+			sourceTree = "<group>";
+		};
 		3F380BD52A11F6F00028FEB1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +207,7 @@
 		3F8772012A105F5400180BED /* MainGroup */ = {
 			isa = PBXGroup;
 			children = (
+				3F1D512D2A19B7A5004F1A2F /* EditAccountModal */,
 				3F02D3A72A191872009B0EB6 /* AdsInTable */,
 				3F02D39C2A190BB0009B0EB6 /* AddAccountModal */,
 				505019712A0A8BEF00C08A38 /* Main.xib */,
@@ -214,6 +229,7 @@
 				3F8772092A10666E00180BED /* AccountNameEditingViewController.swift */,
 				3F87720B2A10668900180BED /* AccountOptionViewController.swift */,
 				3F02D3A52A191680009B0EB6 /* AddAccountModalViewController.swift */,
+				3F1D51382A19BD71004F1A2F /* EditAccountModalViewController.swift */,
 			);
 			path = MainGroup;
 			sourceTree = "<group>";
@@ -230,6 +246,7 @@
 		5037E7302A09219500257514 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				3F1D51332A19BBDC004F1A2F /* black_close.png */,
 				3F02D3A32A190D66009B0EB6 /* next.png */,
 				3F1E2AF02A152796004389D4 /* toastClose.png */,
 				3F82C6052A13D11C003AE05B /* colorCheck.png */,
@@ -417,6 +434,7 @@
 				5050197E2A0AFDEB00C08A38 /* History.xib in Resources */,
 				507589522A0C515E007FD385 /* MainType1Cell.xib in Resources */,
 				3F02D3A42A190D66009B0EB6 /* next.png in Resources */,
+				3F1D51342A19BBDC004F1A2F /* black_close.png in Resources */,
 				5075895C2A0D0E93007FD385 /* MainType3Cell.xib in Resources */,
 				507589622A0D1335007FD385 /* more.png in Resources */,
 				3F82C6062A13D11C003AE05B /* colorCheck.png in Resources */,
@@ -428,6 +446,7 @@
 				3F02D39E2A190BCB009B0EB6 /* AddAccountModalView.xib in Resources */,
 				507589662A0D19BE007FD385 /* friends.png in Resources */,
 				3F8772042A105F9E00180BED /* AccountOptionView.xib in Resources */,
+				3F1D51312A19B7ED004F1A2F /* EditAccountModalView.xib in Resources */,
 				505D571A2A09156C0047CE1B /* Assets.xcassets in Resources */,
 				3F1E2AF12A152796004389D4 /* toastClose.png in Resources */,
 				505019892A0B8A0300C08A38 /* Login.xib in Resources */,
@@ -472,6 +491,7 @@
 				505D57132A09156B0047CE1B /* SceneDelegate.swift in Sources */,
 				3F1E2AE32A150259004389D4 /* ToastVIew.swift in Sources */,
 				3F380BD72A121AC40028FEB1 /* StringExtension.swift in Sources */,
+				3F1D51392A19BD71004F1A2F /* EditAccountModalViewController.swift in Sources */,
 				3F87720C2A10668900180BED /* AccountOptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

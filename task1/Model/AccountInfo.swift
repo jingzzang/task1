@@ -40,6 +40,7 @@ struct AccountInfo {
     var image: UIImage?             // 모임통장 유저 프로필 이미지
     var moneyboxYn: Bool?           // 저금통 여부
     var safeboxYn: Bool?            // 세이프박스 여부
+    var isVisible: Bool = true      // 메인노출 여부
 }
 
 struct ProductInfo {

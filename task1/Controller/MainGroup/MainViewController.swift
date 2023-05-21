@@ -88,17 +88,17 @@ final class MainViewController: UIViewController, UITableViewDelegate, UITableVi
 // UITableViewDataSource
 extension MainViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataManager.acctInfoData.count + 2
+        return DataManager.visibleAcctData.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row >= DataManager.acctInfoData.count {
+        if indexPath.row >= DataManager.visibleAcctData.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "EtcMainCell", for: indexPath) as! EtcMainCell
             cell.configure(isPlus: indexPath.row == DataManager.acctInfoData.count)
             cell.delegate = self
             return cell
         }else {
-            let data = DataManager.acctInfoData[indexPath.row]
+            let data = DataManager.visibleAcctData[indexPath.row]
             let type = data.type
             if type == .Deposit {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MainType1Cell", for: indexPath) as! MainType1Cell
@@ -184,6 +184,8 @@ extension MainViewController: EtcMainCellDelegate {
     }
     
     func openEditAccountModal() {
-        print("openEditAccountModal")
+        let vc = EditAccountModalViewController(nibName: "EditAccountModalView", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true)
     }
 }
