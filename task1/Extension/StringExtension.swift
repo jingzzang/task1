@@ -38,7 +38,6 @@ extension String {
     func isAccountNumber() -> Bool {
         let onlyNums = self.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
         
-        print("isAccountNumber : \(onlyNums)")
         // 정규식 처리 추가
         return onlyNums.count > 5
     }
