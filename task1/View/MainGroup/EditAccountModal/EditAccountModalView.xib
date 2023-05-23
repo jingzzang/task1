@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditAccountModalViewController" customModule="task1" customModuleProvider="target">
             <connections>
-                <outlet property="contentBaseView" destination="A09-l8-Hye" id="TFl-xS-SqI"/>
                 <outlet property="contentView" destination="mH0-vs-57b" id="EFW-Ra-H1K"/>
                 <outlet property="saveBtn" destination="wfM-Lg-C0r" id="m1R-lb-ae4"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Hyj-w1-Q0P"/>
